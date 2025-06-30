@@ -1,0 +1,1041 @@
+{
+  "cart": {
+    "en": "Cart",
+    "vi": "Giỏ hàng",
+    "th": "ตะกร้า",
+    "zh": "购物车",
+    "ko": "장바구니",
+    "ja": "カート",
+    "ru": "Корзина"
+  },
+  "total": {
+    "en": "Total",
+    "vi": "Tổng",
+    "th": "รวม",
+    "zh": "总计",
+    "ko": "총계",
+    "ja": "合計",
+    "ru": "Итого"
+  },
+  "delete": {
+    "en": "Delete",
+    "vi": "Xóa",
+    "th": "ลบ",
+    "zh": "删除",
+    "ko": "삭제",
+    "ja": "削除",
+    "ru": "Удалить"
+  },
+  "delete_all": {
+    "en": "Delete All",
+    "vi": "Xóa tất cả",
+    "th": "ลบทั้งหมด",
+    "zh": "全部删除",
+    "ko": "모두 삭제",
+    "ja": "すべて削除",
+    "ru": "Удалить все"
+  },
+  "add_to_cart": {
+    "en": "Add to Cart",
+    "vi": "Thêm vào giỏ",
+    "th": "เพิ่มลงตะกร้า",
+    "zh": "添加到购物车",
+    "ko": "장바구니에 추가",
+    "ja": "カートに追加",
+    "ru": "Добавить в корзину"
+  },
+  "remove": {
+    "en": "Remove",
+    "vi": "Xóa",
+    "th": "ลบ",
+    "zh": "移除",
+    "ko": "제거",
+    "ja": "削除",
+    "ru": "Удалить"
+  },
+  "select_weight": {
+    "en": "Select weight:",
+    "vi": "Chọn khối lượng:",
+    "th": "เลือกน้ำหนัก:",
+    "zh": "选择重量：",
+    "ko": "무게 선택:",
+    "ja": "重量を選択：",
+    "ru": "Выберите вес:"
+  },
+  "select_size": {
+    "en": "Select size:",
+    "vi": "Chọn kích thước:",
+    "th": "เลือกขนาด:",
+    "zh": "选择尺寸：",
+    "ko": "크기 선택:",
+    "ja": "サイズを選択：",
+    "ru": "Выберите размер:"
+  },
+  "from": {
+    "en": "from",
+    "vi": "từ",
+    "th": "จาก",
+    "zh": "起",
+    "ko": "부터",
+    "ja": "から",
+    "ru": "от"
+  },
+  "gram": {
+    "en": "g",
+    "vi": "g",
+    "th": "ก",
+    "zh": "克",
+    "ko": "g",
+    "ja": "g",
+    "ru": "г"
+  },
+  "per_kg": {
+    "en": "/kg",
+    "vi": "/kg",
+    "th": "/กก",
+    "zh": "/公斤",
+    "ko": "/kg",
+    "ja": "/kg",
+    "ru": "/кг"
+  },
+  "quantity": {
+    "en": "Quantity",
+    "vi": "Số lượng",
+    "th": "จำนวน",
+    "zh": "数量",
+    "ko": "수량",
+    "ja": "数量",
+    "ru": "Количество"
+  },
+  "min_weight": {
+    "en": "min",
+    "vi": "tối thiểu",
+    "th": "ขั้นต่ำ",
+    "zh": "最小",
+    "ko": "최소",
+    "ja": "最小",
+    "ru": "мин"
+  },
+  "checkout": {
+    "en": "Checkout",
+    "vi": "Thanh toán",
+    "th": "ชำระเงิน",
+    "zh": "结账",
+    "ko": "결제",
+    "ja": "チェックアウト",
+    "ru": "Оформить заказ"
+  },
+  "categories": {
+    "drinks": {
+      "en": "Drinks",
+      "vi": "Đồ uống",
+      "th": "เครื่องดื่ม",
+      "zh": "饮料",
+      "ko": "음료",
+      "ja": "ドリンク",
+      "ru": "Напитки"
+    },
+    "salad": {
+      "en": "Salad",
+      "vi": "Gỏi",
+      "th": "ยำ",
+      "zh": "沙拉",
+      "ko": "샐러드",
+      "ja": "サラダ",
+      "ru": "Салат"
+    },
+    "main_course": {
+      "en": "Main Course",
+      "vi": "Món chính",
+      "th": "อาหารจานหลัก",
+      "zh": "主菜",
+      "ko": "메인 요리",
+      "ja": "メインディッシュ",
+      "ru": "Основное блюдо"
+    },
+    "vegetable": {
+      "en": "Vegetable",
+      "vi": "Rau",
+      "th": "ผัก",
+      "zh": "蔬菜",
+      "ko": "채소",
+      "ja": "野菜",
+      "ru": "Овощи"
+    },
+    "types_of_oysters": {
+      "en": "Types of Oysters",
+      "vi": "Các loại hàu",
+      "th": "ประเภทหอยนางรม",
+      "zh": "生蚝种类",
+      "ko": "굴 종류",
+      "ja": "カキの種類",
+      "ru": "Виды устриц"
+    },
+    "type_of_snails": {
+      "en": "Types of Snails",
+      "vi": "Các loại ốc",
+      "th": "ประเภทหอย",
+      "zh": "螺类",
+      "ko": "달팽이 종류",
+      "ja": "貝類",
+      "ru": "Виды улиток"
+    },
+    "types_of_squids": {
+      "en": "Types of Squids",
+      "vi": "Các loại mực",
+      "th": "ประเภทปลาหมึก",
+      "zh": "鱿鱼种类",
+      "ko": "오징어 종류",
+      "ja": "イカの種類",
+      "ru": "Виды кальмаров"
+    },
+    "lobster": {
+      "en": "Lobster",
+      "vi": "Tôm hùm",
+      "th": "กุ้งมังกร",
+      "zh": "龙虾",
+      "ko": "랍스터",
+      "ja": "ロブスター",
+      "ru": "Омар"
+    },
+    "mantis_shrimp": {
+      "en": "Mantis Shrimp",
+      "vi": "Tôm tít",
+      "th": "กุ้งตั๊กแตน",
+      "zh": "螳螂虾",
+      "ko": "가재",
+      "ja": "シャコ",
+      "ru": "Креветки-богомолы"
+    },
+    "tiger_shrimp": {
+      "en": "Tiger Shrimp",
+      "vi": "Tôm sú",
+      "th": "กุ้งกุลาดำ",
+      "zh": "虎虾",
+      "ko": "타이거 새우",
+      "ja": "タイガーエビ",
+      "ru": "Тигровые креветки"
+    },
+    "crabs": {
+      "en": "Crabs",
+      "vi": "Cua",
+      "th": "ปู",
+      "zh": "螃蟹",
+      "ko": "게",
+      "ja": "カニ",
+      "ru": "Крабы"
+    },
+    "sea_crab": {
+      "en": "Sea Crab",
+      "vi": "Cua biển",
+      "th": "ปูทะเล",
+      "zh": "海蟹",
+      "ko": "바다게",
+      "ja": "海ガニ",
+      "ru": "Морской краб"
+    },
+    "grilled_fish": {
+      "en": "Grilled Fish",
+      "vi": "Cá nướng",
+      "th": "ปลาย่าง",
+      "zh": "烤鱼",
+      "ko": "생선 구이",
+      "ja": "魚の焼き物",
+      "ru": "Жареная рыба"
+    },
+    "hotpot": {
+      "en": "Hotpot",
+      "vi": "Lẩu",
+      "th": "หม้อไฟ",
+      "zh": "火锅",
+      "ko": "샤브샤브",
+      "ja": "鍋",
+      "ru": "Хотпот"
+    },
+    "other": {
+      "en": "Other",
+      "vi": "Khác",
+      "th": "อื่นๆ",
+      "zh": "其他",
+      "ko": "기타",
+      "ja": "その他",
+      "ru": "Другое"
+    }
+  },
+  "items": {
+    "larue_smooth": {
+      "en": "Larue Smooth",
+      "vi": "Bia Larue Smooth",
+      "th": "ลา รู สมูท",
+      "zh": "拉鲁啤酒",
+      "ko": "카루 맥주",
+      "ja": "ラルービール",
+      "ru": "Пиво Лару"
+    },
+    "tiger_crystal": {
+      "en": "Tiger Crystal",
+      "vi": "Bia Tiger Bạc",
+      "th": "ไทเกอร์ คริสตัล",
+      "zh": "虎牌水晶啤酒",
+      "ko": "타이거 크리스탈",
+      "ja": "タイガークリスタル",
+      "ru": "Тайгер Кристалл"
+    },
+    "heineken": {
+      "en": "Heineken",
+      "vi": "Bia Heineken",
+      "th": "ไฮเนเก้น",
+      "zh": "喜力啤酒",
+      "ko": "하이네켄",
+      "ja": "ハイネケン",
+      "ru": "Хайнекен"
+    },
+    "coca_cola": {
+      "en": "Coca-Cola",
+      "vi": "Coca",
+      "th": "โคคาโคล่า",
+      "zh": "可口可乐",
+      "ko": "코카콜라",
+      "ja": "コカ・コーラ",
+      "ru": "Кока-Кола"
+    },
+    "sprite": {
+      "en": "Sprite",
+      "vi": "Sprite",
+      "th": "สไปรท์",
+      "zh": "雪碧",
+      "ko": "스프라이트",
+      "ja": "スプライト",
+      "ru": "Спрайт"
+    },
+    "fanta": {
+      "en": "Fanta",
+      "vi": "Fanta",
+      "th": "แฟนต้า",
+      "zh": "芬达",
+      "ko": "환타",
+      "ja": "ファンタ",
+      "ru": "Фанта"
+    },
+    "dasani_water": {
+      "en": "Dasani Water",
+      "vi": "Nước Dasani",
+      "th": "น้ำดื่มดาซานี",
+      "zh": "达萨尼水",
+      "ko": "다사니 생수",
+      "ja": "ダサニウォーター",
+      "ru": "Вода Дасани"
+    },
+    "huda": {
+      "en": "Huda",
+      "vi": "Bia Huda",
+      "th": "ฮูด้า",
+      "zh": "胡达啤酒",
+      "ko": "후다 맥주",
+      "ja": "フーダビール",
+      "ru": "Пиво Худа"
+    },
+    "red_bull": {
+      "en": "Red Bull",
+      "vi": "Red Bull",
+      "th": "กระทิงแดง",
+      "zh": "红牛",
+      "ko": "레드불",
+      "ja": "レッドブル",
+      "ru": "Ред Булл"
+    },
+    "sparkling_mineral_water": {
+      "en": "Sparkling Mineral Water",
+      "vi": "Nước khoáng có ga",
+      "th": "น้ำแร่มีฟอง",
+      "zh": "气泡矿泉水",
+      "ko": "탄산 미네랄워터",
+      "ja": "スパークリングミネラルウォーター",
+      "ru": "Газированная минеральная вода"
+    },
+    "fish_salad": {
+      "en": "Fish salad",
+      "vi": "Gỏi Cá Lạc",
+      "th": "ยำปลาลัก",
+      "zh": "鱼沙拉",
+      "ko": "생선 샐러드",
+      "ja": "魚のサラダ",
+      "ru": "Салат из рыбы"
+    },
+    "melo_melo_sea_snail_salad": {
+      "en": "Melo melo sea snail salad",
+      "vi": "Ốc Giác Trộn",
+      "th": "ยำหอยเมโล",
+      "zh": "梅洛海螺沙拉",
+      "ko": "멜로 소라 샐러드",
+      "ja": "メロ貝のサラダ",
+      "ru": "Салат из улитки мело"
+    },
+    "jellyfish_salad": {
+      "en": "Jellyfish salad",
+      "vi": "Sứa Trộn",
+      "th": "ยำแมงกะพรุน",
+      "zh": "海蜇沙拉",
+      "ko": "해파리 샐러드",
+      "ja": "クラゲのサラダ",
+      "ru": "Салат из медузы"
+    },
+    "beef_salad": {
+      "en": "Beef salad",
+      "vi": "Gỏi Bò Bóp",
+      "th": "ยำเนื้อวัว",
+      "zh": "牛肉沙拉",
+      "ko": "소고기 샐러드",
+      "ja": "牛肉サラダ",
+      "ru": "Салат из говядины"
+    },
+    "seafood_salad": {
+      "en": "Seafood salad",
+      "vi": "Gỏi Hải Sản",
+      "th": "ยำทะเล",
+      "zh": "海鲜沙拉",
+      "ko": "해산물 샐러드",
+      "ja": "シーフードサラダ",
+      "ru": "Салат из морепродуктов"
+    },
+    "chicken_wing_stir_fried_fish_sauce": {
+      "en": "Chicken wing stir-fried with fish sauce",
+      "vi": "Cánh gà chiên mắm",
+      "th": "ปีกไก่ทอดน้ำปลา",
+      "zh": "鸡翅炸鱼露",
+      "ko": "닭날개 피쉬소스 볶음",
+      "ja": "手羽先のナンプラー炒め",
+      "ru": "Куриные крылышки в рыбном соусе"
+    },
+    "seafood_fried_rice": {
+      "en": "Seafood fried rice",
+      "vi": "Cơm Chiên Hải Sản",
+      "th": "ข้าวผัดทะเล",
+      "zh": "海鲜炒饭",
+      "ko": "해산물 볶음밥",
+      "ja": "シーフードチャーハン",
+      "ru": "Жареный рис с морепродуктами"
+    },
+    "egg_fried_rice": {
+      "en": "Egg fried rice",
+      "vi": "Cơm Chiên Trứng",
+      "th": "ข้าวผัดไข่",
+      "zh": "蛋炒饭",
+      "ko": "계란 볶음밥",
+      "ja": "卵チャーハン",
+      "ru": "Жареный рис с яйцом"
+    },
+    "seafood_stir_fried_noodles": {
+      "en": "Seafood stir-fried noodles",
+      "vi": "Mì Xào Hải Sản",
+      "th": "ก๋วยเตี๋ยวผัดทะเล",
+      "zh": "海鲜炒面",
+      "ko": "해산물 볶음면",
+      "ja": "シーフード焼きそば",
+      "ru": "Жареная лапша с морепродуктами"
+    },
+    "beef_stir_fried_noodles": {
+      "en": "Beef stir-fried noodles",
+      "vi": "Mì Xào Bò",
+      "th": "ก๋วยเตี๋ยวผัดเนื้อ",
+      "zh": "牛肉炒面",
+      "ko": "소고기 볶음면",
+      "ja": "牛肉焼きそば",
+      "ru": "Жареная лапша с говядиной"
+    },
+    "porridge": {
+      "en": "Porridge",
+      "vi": "Cháo",
+      "th": "ข้าวต้ม",
+      "zh": "粥",
+      "ko": "죽",
+      "ja": "お粥",
+      "ru": "Каша"
+    },
+    "stir_fried_morning_glory_garlic": {
+      "en": "Stir-fried morning glory with garlic",
+      "vi": "Rau Muống Xào Tỏi",
+      "th": "ผัดผักบุ้งกระเทียม",
+      "zh": "蒜蓉空心菜",
+      "ko": "마늘 파스타",
+      "ja": "ガーリックパスタ",
+      "ru": "Паста с чесноком"
+    },
+    "stir_fried_wild_vegetables_garlic": {
+      "en": "Stir-fried wild vegetables with garlic",
+      "vi": "Rau Rừng Xào Tỏi",
+      "th": "ผัดผักป่ากระเทียม",
+      "zh": "蒜蓉野菜",
+      "ko": "야생채소 마늘볶음",
+      "ja": "山菜のガーリック炒め",
+      "ru": "Дикие овощи с чесноком"
+    },
+    "grilled_scallops_onion": {
+      "en": "Grilled scallops with onion",
+      "vi": "Sò Điệp Nướng Mỡ Hành",
+      "th": "หอยเชลล์ย่างหัวหอม",
+      "zh": "洋葱烤扇贝",
+      "ko": "양파 가리비 구이",
+      "ja": "玉ねぎホタテ焼き",
+      "ru": "Гребешки с луком"
+    },
+    "cheese_baked_scallops": {
+      "en": "Cheese baked scallops",
+      "vi": "Sò Điệp Nướng Phô Mai",
+      "th": "หอยเชลล์อบชีส",
+      "zh": "芝士焗扇贝",
+      "ko": "치즈 가리비 구이",
+      "ja": "チーズホタテ焼き",
+      "ru": "Гребешки с сыром"
+    },
+    "grilled_oysters_onion": {
+      "en": "Grilled oysters with onion",
+      "vi": "Hàu Nướng Mỡ Hành",
+      "th": "หอยนางรมย่างหัวหอม",
+      "zh": "洋葱烤生蚝",
+      "ko": "양파 굴 구이",
+      "ja": "玉ねぎカキ焼き",
+      "ru": "Устрицы с луком"
+    },
+    "cheese_baked_oysters": {
+      "en": "Cheese baked oysters",
+      "vi": "Hàu Nướng Phô Mai",
+      "th": "หอยนางรมอบชีส",
+      "zh": "芝士焗生蚝",
+      "ko": "치즈 굴 구이",
+      "ja": "チーズカキ焼き",
+      "ru": "Устрицы с сыром"
+    },
+    "sashimi_oyster": {
+      "en": "Sashimi oyster",
+      "vi": "Hàu Sashimi",
+      "th": "หอยนางรมซาชิมิ",
+      "zh": "生蚝刺身",
+      "ko": "굴 사시미",
+      "ja": "カキ刺身",
+      "ru": "Устрицы сашими"
+    },
+    "steamed_clams": {
+      "en": "Steamed clams",
+      "vi": "Nghêu Hấp",
+      "th": "หอยแมลงภู่นึ่ง",
+      "zh": "蒸蛤蜊",
+      "ko": "조개 찜",
+      "ja": "アサリ蒸し",
+      "ru": "Мидии на пару"
+    },
+    "grilled_clams": {
+      "en": "Grilled clams",
+      "vi": "Nghêu Nướng",
+      "th": "หอยแมลงภู่ย่าง",
+      "zh": "烤蛤蜊",
+      "ko": "조개 구이",
+      "ja": "アサリ焼き",
+      "ru": "Жареные мидии"
+    },
+    "steamed_so_duong": {
+      "en": "Steamed Sò Dương",
+      "vi": "Sò Dương Hấp",
+      "th": "หอยดองนึ่ง",
+      "zh": "蒸象拔蚌",
+      "ko": "대합 찜",
+      "ja": "ハマグリ蒸し",
+      "ru": "Морские гребешки на пару"
+    },
+    "grilled_so_duong": {
+      "en": "Grilled Sò Dương",
+      "vi": "Sò Dương Nướng",
+      "th": "หอยดองย่าง",
+      "zh": "烤象拔蚌",
+      "ko": "대합 구이",
+      "ja": "ハマグリ焼き",
+      "ru": "Жареные морские гребешки"
+    },
+    "steamed_so_bum": {
+      "en": "Steamed Sò Bum",
+      "vi": "Sò Bum Hấp",
+      "th": "หอยบัมนึ่ง",
+      "zh": "蒸蛤蜊",
+      "ko": "바지락 찜",
+      "ja": "シジミ蒸し",
+      "ru": "Ракушки на пару"
+    },
+    "grilled_so_bum": {
+      "en": "Grilled Sò Bum",
+      "vi": "Sò Bum Nướng",
+      "th": "หอยบัมย่าง",
+      "zh": "烤蛤蜊",
+      "ko": "바지락 구이",
+      "ja": "シジミ焼き",
+      "ru": "Жареные ракушки"
+    },
+    "steamed_so_mia": {
+      "en": "Steamed Sò Mía",
+      "vi": "Sò Mía Hấp",
+      "th": "หอยอ้อยนึ่ง",
+      "zh": "蒸蛤蜊",
+      "ko": "조개 찜",
+      "ja": "貝蒸し",
+      "ru": "Ракушки на пару"
+    },
+    "grilled_so_mia": {
+      "en": "Grilled Sò Mía",
+      "vi": "Sò Mía Nướng",
+      "th": "หอยอ้อยย่าง",
+      "zh": "烤蛤蜊",
+      "ko": "조개 구이",
+      "ja": "貝焼き",
+      "ru": "Жареные ракушки"
+    },
+    "grilled_mussels": {
+      "en": "Grilled mussels",
+      "vi": "Vẹm Nướng",
+      "th": "หอยแมลงภู่ย่าง",
+      "zh": "烤贻贝",
+      "ko": "홍합 구이",
+      "ja": "ムール貝焼き",
+      "ru": "Жареные мидии"
+    },
+    "steamed_chips": {
+      "en": "Steamed chips",
+      "vi": "Chíp Hấp",
+      "th": "หอยชิปนึ่ง",
+      "zh": "蒸蛤蜊",
+      "ko": "조개 찜",
+      "ja": "貝蒸し",
+      "ru": "Ракушки на пару"
+    },
+    "steamed_cockles": {
+      "en": "Steamed cockles",
+      "vi": "Sò Huyết Hấp",
+      "th": "หอยเลือดนึ่ง",
+      "zh": "蒸血蛤",
+      "ko": "피조개 찜",
+      "ja": "アカガイ蒸し",
+      "ru": "Сердцевидки на пару"
+    },
+    "self_baked_humor": {
+      "en": "Self baked humor",
+      "vi": "Tu Hài Nướng",
+      "th": "หอยทูไฮย่าง",
+      "zh": "烤蛤蜊",
+      "ko": "조개 구이",
+      "ja": "貝焼き",
+      "ru": "Жареные ракушки"
+    },
+    "grilled_coi_may": {
+      "en": "Grilled Coi May",
+      "vi": "Còi Mây Nướng",
+      "th": "หอยคอยเมย่าง",
+      "zh": "烤蛤蜊",
+      "ko": "조개 구이",
+      "ja": "貝焼き",
+      "ru": "Жареные ракушки"
+    },
+    "grilled_coi_may_small": {
+      "en": "Grilled Coi May (Small)",
+      "vi": "Còi Mây Nướng (Nhỏ)",
+      "th": "หอยคอยเมย่าง (เล็ก)",
+      "zh": "烤蛤蜊 (小)",
+      "ko": "조개 구이 (소)",
+      "ja": "貝焼き (小)",
+      "ru": "Жареные ракушки (маленькие)"
+    },
+    "grilled_coi_may_medium": {
+      "en": "Grilled Coi May (Medium)",
+      "vi": "Còi Mây Nướng (Vừa)",
+      "th": "หอยคอยเมย่าง (กลาง)",
+      "zh": "烤蛤蜊 (中)",
+      "ko": "조개 구이 (중)",
+      "ja": "貝焼き (中)",
+      "ru": "Жареные ракушки (средние)"
+    },
+    "grilled_coi_may_large": {
+      "en": "Grilled Coi May (Large)",
+      "vi": "Còi Mây Nướng (Lớn)",
+      "th": "หอยคอยเมย่าง (ใหญ่)",
+      "zh": "烤蛤蜊 (大)",
+      "ko": "조개 구이 (대)",
+      "ja": "貝焼き (大)",
+      "ru": "Жареные ракушки (большие)"
+    },
+    "steamed_sweet_snails": {
+      "en": "Steamed sweet snails",
+      "vi": "Ốc Hương Hấp",
+      "th": "หอยหวานนึ่ง",
+      "zh": "蒸香螺",
+      "ko": "달팽이 찜",
+      "ja": "カタツムリ蒸し",
+      "ru": "Улитки на пару"
+    },
+    "garlic_butter_sweet_snails": {
+      "en": "Garlic butter sweet snails",
+      "vi": "Ốc Hương Sốt Bơ Tỏi",
+      "th": "หอยหวานซอสเนยกระเทียม",
+      "zh": "蒜蓉黄油香螺",
+      "ko": "마늘버터 달팽이",
+      "ja": "ガーリックバターカタツムリ",
+      "ru": "Улитки с чесночным маслом"
+    },
+    "steamed_spiny_sea_snails": {
+      "en": "Steamed spiny sea snails",
+      "vi": "Ốc Gai Hấp",
+      "th": "หอยเม่นนึ่ง",
+      "zh": "蒸海螺",
+      "ko": "고동 찜",
+      "ja": "サザエ蒸し",
+      "ru": "Морские улитки на пару"
+    },
+    "sauteed_chili_spiny_sea_snails": {
+      "en": "Sauteed chili spiny sea snails",
+      "vi": "Ốc Gai Xào Xả Ớt",
+      "th": "หอยเม่นผัดพริก",
+      "zh": "辣椒炒海螺",
+      "ko": "고추 고동 볶음",
+      "ja": "チリサザエ炒め",
+      "ru": "Морские улитки с чили"
+    },
+    "mud_creeper_sea_snails_coconut_sauce": {
+      "en": "Mud creeper sea snails stir-fried in coconut sauce",
+      "vi": "Ốc Lên Xào Dừa",
+      "th": "หอยเลนผัดกะทิ",
+      "zh": "椰汁炒泥螺",
+      "ko": "코코넛소스 달팽이 볶음",
+      "ja": "ココナッツソースカタツムリ炒め",
+      "ru": "Улитки в кокосовом соусе"
+    },
+    "steamed_baby_squid": {
+      "en": "Steamed baby squid",
+      "vi": "Mực Cơm Hấp",
+      "th": "ปลาหมึกทารกนึ่ง",
+      "zh": "蒸小鱿鱼",
+      "ko": "아기 오징어 찜",
+      "ja": "子イカ蒸し",
+      "ru": "Кальмары на пару"
+    },
+    "fried_baby_squid_fish_sauce": {
+      "en": "Fried baby squid fish sauce",
+      "vi": "Mực Cơm Chiên Mắm",
+      "th": "ปลาหมึกทารกทอดน้ำปลา",
+      "zh": "鱼露炸小鱿鱼",
+      "ko": "아기 오징어 피쉬소스 튀김",
+      "ja": "子イカのナンプラー揚げ",
+      "ru": "Кальмары в рыбном соусе"
+    },
+    "steamed_needle_squid": {
+      "en": "Steamed needle squid",
+      "vi": "Mực Ống Hấp",
+      "th": "ปลาหมึกเข็มนึ่ง",
+      "zh": "蒸针鱿鱼",
+      "ko": "바늘 오징어 찜",
+      "ja": "スルメイカ蒸し",
+      "ru": "Кальмары-иглы на пару"
+    },
+    "grilled_needle_squid": {
+      "en": "Grilled needle squid",
+      "vi": "Mực Ống Nướng",
+      "th": "ปลาหมึกเข็มย่าง",
+      "zh": "烤针鱿鱼",
+      "ko": "바늘 오징어 구이",
+      "ja": "スルメイカ焼き",
+      "ru": "Жареные кальмары-иглы"
+    },
+    "steamed_broad_squid": {
+      "en": "Steamed broad squid",
+      "vi": "Mực Lá Hấp",
+      "th": "ปลาหมึกใบนึ่ง",
+      "zh": "蒸宽鱿鱼",
+      "ko": "잎 오징어 찜",
+      "ja": "アオリイカ蒸し",
+      "ru": "Кальмары-листья на пару"
+    },
+    "grilled_broad_squid": {
+      "en": "Grilled broad squid",
+      "vi": "Mực Lá Nướng",
+      "th": "ปลาหมึกใบย่าง",
+      "zh": "烤宽鱿鱼",
+      "ko": "잎 오징어 구이",
+      "ja": "アオリイカ焼き",
+      "ru": "Жареные кальмары-листья"
+    },
+    "tri_hang_special_lobster": {
+      "en": "Trí Hằng's special lobster",
+      "vi": "Tôm Hùm Sốt Trí Hằng",
+      "th": "กุ้งมังกรซอสตรีฮั่ง",
+      "zh": "智恒特制龙虾",
+      "ko": "찌항 특제 랍스터",
+      "ja": "チーハン特製ロブスター",
+      "ru": "Особый лобстер Чи Ханг"
+    },
+    "grilled_lobster_cheese": {
+      "en": "Grilled lobster cheese",
+      "vi": "Tôm Hùm Nướng Phô Mai",
+      "th": "กุ้งมังกรย่างชีส",
+      "zh": "芝士烤龙虾",
+      "ko": "치즈 랍스터 구이",
+      "ja": "ロブスターのチーズ焼き",
+      "ru": "Омар, запечённый с сыром"
+    },
+    "garlic_butter_lobster": {
+      "en": "Garlic butter lobster",
+      "vi": "Tôm Hùm Sốt Bơ Tỏi",
+      "th": "กุ้งมังกรซอสเนยกระเทียม",
+      "zh": "蒜蓉黄油龙虾",
+      "ko": "마늘버터 랍스터",
+      "ja": "ガーリックバターロブスター",
+      "ru": "Омар с чесночным маслом"
+    },
+    "steamed_lobster": {
+      "en": "Steamed lobster",
+      "vi": "Tôm Hùm Hấp",
+      "th": "กุ้งมังกรนึ่ง",
+      "zh": "蒸龙虾",
+      "ko": "랍스터 찜",
+      "ja": "ロブスター蒸し",
+      "ru": "Омар на пару"
+    },
+    "grilled_lobster": {
+      "en": "Grilled lobster",
+      "vi": "Tôm Hùm Nướng Mọi",
+      "th": "กุ้งมังกรย่าง",
+      "zh": "烤龙虾",
+      "ko": "랍스터 구이",
+      "ja": "ロブスター焼き",
+      "ru": "Жареный омар"
+    },
+    "steamed_mantis_shrimp": {
+      "en": "Steamed mantis shrimp",
+      "vi": "Tôm Tít Hấp",
+      "th": "กุ้งตั๊กแตนนึ่ง",
+      "zh": "蒸螳螂虾",
+      "ko": "가재 찜",
+      "ja": "シャコ蒸し",
+      "ru": "Креветки-богомолы на пару"
+    },
+    "mantis_shrimp_garlic_butter_sauce": {
+      "en": "Mantis shrimp with garlic butter sauce",
+      "vi": "Tôm Tít Sốt Bơ Tỏi",
+      "th": "กุ้งตั๊กแตนซอสเนยกระเทียม",
+      "zh": "蒜蓉黄油螳螂虾",
+      "ko": "마늘버터 가재",
+      "ja": "ガーリックバターシャコ",
+      "ru": "Креветки-богомолы с чесночным маслом"
+    },
+    "mantis_shrimp_tamarind_sauce": {
+      "en": "Mantis shrimp with tamarind sauce",
+      "vi": "Tôm Tít Sốt Me",
+      "th": "กุ้งตั๊กแตนซอสมะขาม",
+      "zh": "罗望子酱螳螂虾",
+      "ko": "타마린드소스 가재",
+      "ja": "タマリンドソースシャコ",
+      "ru": "Креветки-богомолы с тамариндом"
+    },
+    "tri_hang_special_mantis_shrimp": {
+      "en": "Trí Hằng's special mantis shrimp",
+      "vi": "Tôm Tít Sốt Trí Hằng",
+      "th": "กุ้งตั๊กแตนซอสตรีฮั่ง",
+      "zh": "智恒特制螳螂虾",
+      "ko": "찌항 특제 가재",
+      "ja": "チーハン特製シャコ",
+      "ru": "Особые креветки-богомолы Чи Ханг"
+    },
+    "mantis_shrimp_roasted_fish_sauce": {
+      "en": "Mantis shrimp with roasted fish sauce",
+      "vi": "Tôm Tít Rang Mắm",
+      "th": "กุ้งตั๊กแตนคั่วน้ำปลา",
+      "zh": "鱼露烤螳螂虾",
+      "ko": "피쉬소스 가재 구이",
+      "ja": "ナンプラーシャコ焼き",
+      "ru": "Креветки-богомолы в рыбном соусе"
+    },
+    "grilled_tiger_shrimp": {
+      "en": "Grilled tiger shrimp",
+      "vi": "Tôm Sú Nướng",
+      "th": "กุ้งกุลาดำย่าง",
+      "zh": "烤虎虾",
+      "ko": "타이거 새우 구이",
+      "ja": "タイガーエビ焼き",
+      "ru": "Жареные тигровые креветки"
+    },
+    "steamed_tiger_shrimp": {
+      "en": "Steamed tiger shrimp",
+      "vi": "Tôm Sú Hấp",
+      "th": "กุ้งกุลาดำนึ่ง",
+      "zh": "蒸虎虾",
+      "ko": "타이거 새우 찜",
+      "ja": "タイガーエビ蒸し",
+      "ru": "Тигровые креветки на пару"
+    },
+    "sashimi_tiger_shrimp": {
+      "en": "Sashimi tiger shrimp",
+      "vi": "Tôm Sú Sashimi",
+      "th": "กุ้งกุลาดำซาชิมิ",
+      "zh": "虎虾刺身",
+      "ko": "타이거 새우 사시미",
+      "ja": "タイガーエビ刺身",
+      "ru": "Тигровые креветки сашими"
+    },
+    "garlic_butter_tiger_shrimp": {
+      "en": "Garlic butter tiger shrimp",
+      "vi": "Tôm Sú Sốt Bơ Tỏi",
+      "th": "กุ้งกุลาดำซอสเนยกระเทียม",
+      "zh": "蒜蓉黄油虎虾",
+      "ko": "마늘버터 타이거 새우",
+      "ja": "ガーリックバタータイガーエビ",
+      "ru": "Тигровые креветки с чесночным маслом"
+    },
+    "tiger_shrimp_tamarind_sauce": {
+      "en": "Tiger shrimp with tamarind sauce",
+      "vi": "Tôm Sú Sốt Me",
+      "th": "กุ้งกุลาดำซอสมะขาม",
+      "zh": "罗望子酱虎虾",
+      "ko": "타마린드소스 타이거 새우",
+      "ja": "タマリンドソースタイガーエビ",
+      "ru": "Тигровые креветки с тамариндом"
+    },
+    "tri_hang_special_tiger_shrimp": {
+      "en": "Trí Hằng's special tiger shrimp",
+      "vi": "Tôm Sú Sốt Trí Hằng",
+      "th": "กุ้งกุลาดำซอสตรีฮั่ง",
+      "zh": "智恒特制虎虾",
+      "ko": "찌항 특제 타이거 새우",
+      "ja": "チーハン特製タイガーエビ",
+      "ru": "Особые тигровые креветки Чи Ханг"
+    },
+    "steamed_blue_crab": {
+      "en": "Steamed blue crab",
+      "vi": "Ghẹ Hấp",
+      "th": "ปูน้ำเงินนึ่ง",
+      "zh": "蒸青蟹",
+      "ko": "게 찜",
+      "ja": "カニ蒸し",
+      "ru": "Краб на пару"
+    },
+    "blue_crab_tamarind_sauce": {
+      "en": "Blue crab with tamarind sauce",
+      "vi": "Ghẹ Sốt Me",
+      "th": "ปูน้ำเงินซอสมะขาม",
+      "zh": "罗望子酱青蟹",
+      "ko": "타마린드소스 게",
+      "ja": "タマリンドソースカニ",
+      "ru": "Краб с тамариндом"
+    },
+    "tri_hang_special_sauce_crab": {
+      "en": "Trí Hằng's special sauce crab",
+      "vi": "Ghẹ Sốt Trí Hằng",
+      "th": "ปูน้ำเงินซอสตรีฮั่ง",
+      "zh": "智恒特制酱青蟹",
+      "ko": "찌항 특제소스 게",
+      "ja": "チーハン特製ソースカニ",
+      "ru": "Краб с особым соусом Чи Ханг"
+    },
+    "blue_crab_garlic_butter_sauce": {
+      "en": "Blue crab with garlic butter sauce",
+      "vi": "Ghẹ Sốt Bơ Tỏi",
+      "th": "ปูน้ำเงินซอสเนยกระเทียม",
+      "zh": "蒜蓉黄油青蟹",
+      "ko": "마늘버터 게",
+      "ja": "ガーリックバターカニ",
+      "ru": "Краб с чесночным маслом"
+    },
+    "steamed_sea_crab": {
+      "en": "Steamed sea crab",
+      "vi": "Cua Hấp",
+      "th": "ปูทะเลนึ่ง",
+      "zh": "蒸海蟹",
+      "ko": "바다게 찜",
+      "ja": "海ガニ蒸し",
+      "ru": "Морской краб на пару"
+    },
+    "sea_crab_tamarind_sauce": {
+      "en": "Sea crab with tamarind sauce",
+      "vi": "Cua Sốt Me",
+      "th": "ปูทะเลซอสมะขาม",
+      "zh": "罗望子酱海蟹",
+      "ko": "타마린드소스 바다게",
+      "ja": "タマリンドソース海ガニ",
+      "ru": "Морской краб с тамариндом"
+    },
+    "roasted_sea_crab_fish_sauce": {
+      "en": "Roasted sea crab with fish sauce",
+      "vi": "Cua Rang Mắm",
+      "th": "ปูทะเลคั่วน้ำปลา",
+      "zh": "鱼露烤海蟹",
+      "ko": "피쉬소스 바다게 구이",
+      "ja": "ナンプラー海ガニ焼き",
+      "ru": "Морской краб в рыбном соусе"
+    },
+    "grilled_blue_bone_throbbing_fish": {
+      "en": "Grilled blue bone throbbing fish",
+      "vi": "Cá Nhói Nướng",
+      "th": "ปลาน้อยย่าง",
+      "zh": "烤蓝骨鱼",
+      "ko": "청어 구이",
+      "ja": "青魚焼き",
+      "ru": "Жареная сельдь"
+    },
+    "grilled_lime_key_fish": {
+      "en": "Grilled lime key fish",
+      "vi": "Cá Chìa Vôi Nướng",
+      "th": "ปลาแป้นย่าง",
+      "zh": "烤青柠鱼",
+      "ko": "라임 키 피시 구이",
+      "ja": "ライムキーフィッシュ焼き",
+      "ru": "Жареная рыба с лаймом"
+    },
+    "grilled_betel_nut_fish": {
+      "en": "Grilled betel nut fish",
+      "vi": "Cá Bả Trầu Nướng",
+      "th": "ปลาบาตรวย่าง",
+      "zh": "烤槟榔鱼",
+      "ko": "빈랑나무 열매 피시 구이",
+      "ja": "ビンロウジュフィッシュ焼き",
+      "ru": "Жареная рыба с бетелем"
+    },
+    "grilled_termite_fish": {
+      "en": "Grilled termite fish",
+      "vi": "Cá Mối Nướng",
+      "th": "ปลามดย่าง",
+      "zh": "烤白蚁鱼",
+      "ko": "흰개미 피시 구이",
+      "ja": "シロアリフィッシュ焼き",
+      "ru": "Жареная рыба-термит"
+    },
+    "fish_hotpot": {
+      "en": "Fish hotpot",
+      "vi": "Lẩu Cá",
+      "th": "หม้อไฟปลา",
+      "zh": "鱼火锅",
+      "ko": "생선 샤브샤브",
+      "ja": "魚の鍋",
+      "ru": "Рыбный хотпот"
+    },
+    "cold_napkin": {
+      "en": "Cold napkin",
+      "vi": "Khăn Lạnh",
+      "th": "ผ้าเย็น",
+      "zh": "冷毛巾",
+      "ko": "차가운 냅킨",
+      "ja": "冷たいナプキン",
+      "ru": "Холодная салфетка"
+    },
+    "bread": {
+      "en": "Bread",
+      "vi": "Bánh Mì",
+      "th": "ขนมปัง",
+      "zh": "面包",
+      "ko": "빵",
+      "ja": "パン",
+      "ru": "Хлеб"
+    }
+  },
+  "special_seafood_notification": {
+    "en": "🍤 <strong>{item_name}</strong><br><br>This item may not be exactly {weight}g (taken from your cart, if there are multiple types, we'll use one as reference), and the price may be higher. Price is calculated at {price_per_kg}đ/kg. Staff will weigh and inform you of the final price after preparation.",
+    "vi": "🍤 <strong>{item_name}</strong><br><br>Món này có thể không chính xác {weight}g (lấy giá trị từ giỏ hàng của bạn, nếu có nhiều loại cứ lấy đại 1 cái), và giá có thể cao hơn. Giá được tính theo {price_per_kg}đ/kg. Nhân viên sẽ cân và báo lại giá cuối cùng cho bạn sau khi chế biến.",
+    "th": "🍤 <strong>{item_name}</strong><br><br>รายการนี้อาจไม่ใช่ {weight}g ที่แน่นอน (นำมาจากตะกร้าของคุณ หากมีหลายประเภทเราจะใช้หนึ่งรายการเป็นข้อมูลอ้างอิง) และราคาอาจสูงกว่า ราคาคำนวณที่ {price_per_kg}đ/kg พนักงานจะชั่งน้ำหนักและแจ้งราคาสุดท้ายให้คุณทราบหลังการเตรียม",
+    "zh": "🍤 <strong>{item_name}</strong><br><br>此商品可能不是准确的{weight}克（从您的购物车中获取，如果有多种类型，我们将使用一种作为参考），价格可能会更高。价格按{price_per_kg}đ/公斤计算。工作人员将在准备后称重并告知您最终价格。",
+    "ko": "🍤 <strong>{item_name}</strong><br><br>이 항목은 정확히 {weight}g가 아닐 수 있습니다 (장바구니에서 가져온 값, 여러 유형이 있는 경우 하나를 참조로 사용), 가격이 더 높을 수 있습니다. 가격은 {price_per_kg}đ/kg으로 계산됩니다. 직원이 준비 후 무게를 측정하고 최종 가격을 알려드릴 것입니다.",
+    "ja": "🍤 <strong>{item_name}</strong><br><br>この商品は正確に{weight}gではない場合があります（カートから取得した値、複数のタイプがある場合は1つを参考として使用）、価格が高くなる可能性があります。価格は{price_per_kg}đ/kgで計算されます。スタッフが準備後に重量を測定し、最終価格をお知らせします。",
+    "ru": "🍤 <strong>{item_name}</strong><br><br>Этот товар может быть не точно {weight}г (взято из вашей корзины, если есть несколько типов, мы используем один в качестве справочного), и цена может быть выше. Цена рассчитывается по {price_per_kg}đ/кг. Персонал взвесит и сообщит вам окончательную цену после приготовления."
+  }
+} 

@@ -1,0 +1,1645 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #fff;
+    font-size: 16px;
+}
+
+header {
+    text-align: center;
+    padding: 2rem 1rem;
+    position: relative;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+#restaurant-name {
+    margin: 0;
+    font-size: 2.2em;
+}
+
+#opening-hours {
+    font-style: italic;
+    font-size: 1.1em;
+}
+
+.category {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+    margin-top: 40px;
+    clear: both;
+    overflow: hidden;
+}
+
+.category:first-child {
+    margin-top: 20px;
+}
+
+.category-title {
+    font-size: 1.9em;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    clear: both;
+    display: block;
+    width: 100%;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.item-name {
+    font-weight: bold;
+}
+
+.item-price {
+    color: #555;
+}
+
+.item-unit {
+    font-style: italic;
+    color: #777;
+    margin-left: 10px;
+}
+
+#category-nav {
+    background-color: #fff;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    white-space: nowrap;
+    overflow-x: auto;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+#category-nav::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+.category-button {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 20px;
+    padding: 8px 16px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 1.05em;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.category-button:hover, .category-button.active {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Scroll to top button */
+#scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 60px; /* Chiều ngang bằng chiều cao */
+    height: 60px;
+    background: #6c757d; /* Màu xám đơn giản */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    display: none; /* Ẩn hoàn toàn thay vì làm mờ */
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+#scroll-to-top:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+    background: #5a6268; /* Màu xám đậm hơn khi hover */
+}
+
+/* Chatbot Styles */
+.chatbot-container {
+    position: fixed;
+    bottom: 100px; /* Di chuyển lên trên để tránh bị che bởi cart button */
+    right: 20px;
+    z-index: 1000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.chat-button {
+    width: 60px;
+    height: 60px;
+    background: #524fe0; /* Đồng bộ với nút thêm món */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.chat-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+    background: #4a47c7; /* Màu hover đồng bộ */
+}
+
+.chat-button i {
+    color: white;
+    font-size: 24px;
+}
+
+.chat-notification {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: #ff4757;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+.chat-window {
+    position: absolute;
+    bottom: 80px;
+    right: 0;
+    width: 350px;
+    height: 500px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.chat-window.active {
+    display: flex;
+}
+
+.chat-header {
+    background: #524fe0; /* Đồng bộ với nút thêm món và chat */
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 15px 15px 0 0;
+}
+
+.chat-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+}
+
+.chat-title i {
+    font-size: 18px;
+}
+
+.chat-close {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 5px;
+    border-radius: 50%;
+    transition: background 0.3s ease;
+}
+
+.chat-close:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.chat-messages {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background: #f8f9fa;
+}
+
+.message {
+    margin-bottom: 15px;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.message-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    max-width: 80%;
+}
+
+.bot-message .message-content {
+    flex-direction: row;
+}
+
+.user-message .message-content {
+    flex-direction: row-reverse;
+    margin-left: auto;
+}
+
+.message-content i {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+.bot-message .message-content i {
+    background: #524fe0; /* Đồng bộ với nút thêm món và chat */
+    color: white;
+}
+
+.user-message .message-content i {
+    background: #524fe0; /* Đồng bộ với nút thêm món và chat */
+    color: white;
+}
+
+.message-text {
+    background: white;
+    padding: 12px 16px;
+    border-radius: 18px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    line-height: 1.4;
+    word-wrap: break-word;
+}
+
+.bot-message .message-text {
+    border-bottom-left-radius: 5px;
+}
+
+.user-message .message-text {
+    background: #524fe0; /* Đồng bộ với nút thêm món và chat */
+    color: white;
+    border-bottom-right-radius: 5px;
+}
+
+.message-time {
+    font-size: 11px;
+    color: #6c757d;
+    margin-top: 5px;
+    text-align: center;
+}
+
+.chat-input-container {
+    padding: 15px 20px;
+    background: white;
+    border-top: 1px solid #e9ecef;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+#chat-input {
+    flex: 1;
+    border: 1px solid #dee2e6;
+    border-radius: 25px;
+    padding: 12px 20px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+#chat-input:focus {
+    border-color: #667eea;
+}
+
+#chat-send {
+    width: 40px;
+    height: 40px;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+#chat-send:hover {
+    background: #5a6fd8;
+    transform: scale(1.1);
+}
+
+#chat-send:disabled {
+    background: #6c757d;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Responsive Chatbot */
+@media (max-width: 768px) {
+    .chat-window {
+        width: calc(100vw - 40px);
+        height: 60vh;
+        bottom: 66px;
+        right: 0;
+    }
+    
+    .chatbot-container {
+        bottom: 95px;
+        right: 20px;
+    }
+    
+    .chat-button {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .chat-button i {
+        font-size: 20px;
+    }
+}
+
+/* Loading animation for bot responses */
+.typing-indicator {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 12px 16px;
+    background: white;
+    border-radius: 18px;
+    border-bottom-left-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    max-width: 80%;
+}
+
+.typing-dot {
+    width: 8px;
+    height: 8px;
+    background: #667eea;
+    border-radius: 50%;
+    animation: typing 1.4s infinite ease-in-out;
+}
+
+.typing-dot:nth-child(1) { animation-delay: -0.32s; }
+.typing-dot:nth-child(2) { animation-delay: -0.16s; }
+
+@keyframes typing {
+    0%, 80%, 100% {
+        transform: scale(0.8);
+        opacity: 0.5;
+    }
+    40% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Quick action buttons */
+.quick-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.quick-action-btn {
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 15px;
+    padding: 6px 12px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.quick-action-btn:hover {
+    background: #667eea;
+    color: white;
+    border-color: #667eea;
+}
+
+#menu-container {
+    display: block;
+    gap: 0;
+    clear: both;
+}
+
+.category-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 32px;
+    width: 100%;
+    box-sizing: border-box;
+    clear: both;
+    justify-content: flex-start;
+}
+
+.menu-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: calc((100% - 40px) / 3); /* 3 món/hàng với gap 20px */
+    margin-bottom: 0;
+    border: none;
+    padding: 0;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+
+@media (max-aspect-ratio: 9/16) {
+    .menu-card {
+        width: calc((100% - 20px) / 2) !important; /* 2 món/hàng với gap 20px */
+    }
+}
+
+.menu-card-image {
+    width: 100%;
+    aspect-ratio: 4/4.5;
+    background: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-card-image .no-image {
+    color: #aaa;
+    font-size: 1.1em;
+}
+
+.menu-card-content {
+    padding: 12px;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #fafafa;
+}
+
+.menu-card-title {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 6px;
+    height: 3.6em;
+    line-height: 1.2em;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+}
+
+.menu-card-price {
+    color: #c62828;
+    font-weight: bold;
+    font-size: 1.15em;
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum";
+    margin-bottom: 6px;
+}
+
+.menu-card-unit {
+    color: #888;
+    font-size: 1.5em;
+    margin-left: 0;
+    font-weight: normal;
+}
+
+.menu-card-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: auto;
+}
+
+.menu-card-bottom-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 6px;
+}
+
+.add-to-cart-btn {
+    background-color: #524fe0;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    width: 36px;
+    height: 36px;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #4a47c7;
+    transform: scale(1.05);
+}
+
+/* Giỏ hàng */
+.cart-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ff8c42;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 16.4px 30px;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+    z-index: 1001;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+    min-width: 180px;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.cart-button:hover {
+    background-color: #ff7a2e;
+    color: #fff;
+}
+
+.cart-count {
+    position: absolute;
+    top: -7.5px;
+    right: -7.5px;
+    background-color: #ff0000;
+    color: white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-total-display {
+    font-weight: bold;
+    font-size: 21px;
+}
+
+/* Hiệu ứng nhảy số */
+@keyframes numberJump {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); color: #4CAF50; }
+    100% { transform: scale(1); }
+}
+
+.number-jump {
+    animation: numberJump 0.3s ease-in-out;
+}
+
+/* Modal giỏ hàng */
+.cart-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+    z-index: 1002;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart-content {
+    background-color: white;
+    border-radius: 18px;
+    width: 90%;
+    max-width: 750px;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.cart-header {
+    padding: 30px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    background-color: #fafafa;
+    border-radius: 18px 18px 0 0;
+}
+
+.cart-header h2 {
+    font-size: 36px;
+    margin: 0;
+}
+
+.cart-close {
+    background: none;
+    border: none;
+    font-size: 36px;
+    cursor: pointer;
+    color: #666;
+}
+
+.cart-items {
+    padding: 30px;
+    flex: 1;
+    overflow-y: auto;
+    min-height: 0;
+    scrollbar-width: thin;
+    scrollbar-color: #ccc #f5f5f5;
+}
+
+.cart-items::-webkit-scrollbar {
+    width: 6px;
+}
+
+.cart-items::-webkit-scrollbar-track {
+    background: #f5f5f5;
+    border-radius: 4px;
+}
+
+.cart-items::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+}
+
+.cart-items::-webkit-scrollbar-thumb:hover {
+    background: #999;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+    gap: 15px;
+}
+
+.cart-item-image {
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.cart-item-image .no-image {
+    color: #aaa;
+    font-size: 0.8em;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+}
+
+.cart-item-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.cart-item-name {
+    font-weight: bold;
+    margin-bottom: 7.5px;
+    font-size: 16px;
+    line-height: 1.2;
+}
+
+.cart-item-price {
+    color: #c62828;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.cart-item-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-shrink: 0;
+}
+
+.quantity-btn {
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+.quantity-btn:hover {
+    background-color: #e0e0e0;
+}
+
+.remove-btn {
+    background-color: #e53935;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 10px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.remove-btn:hover {
+    background-color: #c62828;
+}
+
+.cart-total {
+    padding: 30px;
+    border-top: 1px solid #ddd;
+    text-align: right;
+    font-weight: bold;
+    font-size: 36px;
+    background-color: #fafafa;
+    flex-shrink: 0;
+}
+
+.delete-all-btn {
+    background-color: #ff8c42;
+    color: white;
+    transition: background-color 0.3s;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.delete-all-btn:hover {
+    background-color: #ff7a2e;
+}
+
+.clearfix {
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+.cart-icon {
+    display: inline-block;
+    vertical-align: middle;
+    width: 2em;
+    height: 2em;
+    position: relative;
+    top: 2px;
+    left: -4px;
+    color: #fff;
+}
+
+.cart-text {
+    font-weight: bold;
+    font-size: 1em;
+    letter-spacing: 1px;
+    margin-right: 8px;
+}
+
+/* Modal chi tiết món ăn - VIẾT LẠI */
+.item-detail-modal {
+    display: none; /* Ẩn mặc định */
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.item-detail-content {
+    background-color: #fff;
+    border-radius: 16px;
+    width: 90%;
+    max-width: 800px;
+    max-height: 90vh;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.item-detail-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: transparent;
+    border: none;
+    font-size: 40px;
+    cursor: pointer;
+    color: #555;
+    z-index: 10;
+}
+.item-detail-close:hover {
+    color: #000;
+}
+
+.item-detail-body {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    flex: 1;
+    min-height: 0;
+}
+
+.item-detail-image {
+    width: 40%; /* Ảnh chiếm 40% theo yêu cầu */
+    /* Điều chỉnh height theo width để có tỉ lệ 4:4.5 như menu */
+    aspect-ratio: 4/4.5;
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0; /* Ngăn ảnh bị co lại */
+}
+
+.item-detail-info {
+    width: 50%;
+    padding: 30px 40px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+    min-height: 350px;
+    flex: 1;
+}
+
+.item-detail-name {
+    font-size: 2.2em;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+    flex-shrink: 0; /* Không cho phép co lại */
+}
+
+.item-detail-unit-price {
+    font-size: 0.9em; /* Giảm từ 1em xuống 0.9em */
+    margin-bottom: 12px; /* Giảm margin */
+    flex-shrink: 0;
+}
+
+/* Responsive cho giá trong modal chi tiết */
+.item-detail-info .item-detail-unit-price {
+    font-size: 1.2em !important; /* Giảm từ 2em xuống 1.2em cho mobile */
+    margin-top: 10px !important; /* Giảm margin top */
+}
+
+.item-options-title {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    flex-shrink: 0; /* Không cho phép co lại */
+}
+
+.item-options-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-shrink: 0; /* Không cho phép co lại */
+}
+
+.item-option-btn {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+.item-option-btn.active, .item-option-btn:hover {
+    background-color: #ff8c42;
+    color: #fff;
+    border-color: #ff7a2e;
+}
+
+.item-custom-input-group {
+    margin-bottom: 20px;
+    flex-shrink: 0; /* Không cho phép co lại */
+}
+
+.item-custom-input {
+    width: 100%;
+    padding: 12px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.item-detail-add-btn {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 16px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: auto; /* Luôn đẩy nút này xuống dưới cùng */
+    transition: background-color 0.3s;
+    flex-shrink: 0; /* Không cho phép co lại */
+}
+
+.item-detail-add-btn:hover {
+    background-color: #45a049;
+}
+
+/* Responsive cho màn hình nhỏ - LUÔN GIỮ 2 CỘT THEO YÊU CẦU */
+@media (max-width: 768px) {
+    /* Không đổi flex-direction, để giữ layout 2 cột */
+
+    .item-detail-content {
+        width: 95%; /* Cho modal rộng hơn một chút trên mobile */
+        max-height: 90vh; /* Giảm chiều cao tối đa */
+    }
+
+    .item-detail-image {
+        width: 40%; /* Ảnh chiếm 40% theo yêu cầu */
+        /* Loại bỏ min-height để ảnh tự động điều chỉnh */
+        background-size: cover;
+        background-position: center;
+    } 
+    
+    .item-detail-info {
+        width: 60%; /* Thông tin chiếm 60% */
+        padding: 15px; /* Giảm padding cho vừa vặn */
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        height: 100%;
+        min-height: 200px;
+        flex: 1;
+    }
+    
+    /* Giảm kích thước font chữ và các thành phần để vừa với không gian hẹp */
+    .item-detail-name {
+        font-size: 1.3em; /* Giảm từ 1.6em xuống 1.3em */
+        margin-bottom: 3px; /* Giảm margin */
+        line-height: 1.2;
+        flex-shrink: 0;
+    }
+    
+    .item-detail-unit-price {
+        font-size: 0.9em; /* Giảm từ 1em xuống 0.9em */
+        margin-bottom: 12px; /* Giảm margin */
+        flex-shrink: 0;
+    }
+
+    .item-options-title {
+        font-size: 0.9em; /* Giảm từ 1em xuống 0.9em */
+        margin-bottom: 6px; /* Giảm margin */
+        flex-shrink: 0;
+    }
+
+    .item-options-list {
+        gap: 4px; /* Giảm gap để có thể hiển thị 3 lựa chọn trên 1 hàng */
+        margin-bottom: 12px; /* Giảm margin */
+        flex-wrap: wrap;
+        flex-shrink: 0;
+    }
+
+    .item-option-btn {
+        padding: 6px 8px; /* Giảm padding */
+        font-size: 0.8em; /* Giảm từ 0.9em xuống 0.8em */
+        border-radius: 6px; /* Giảm border-radius */
+        min-width: 60px; /* Đảm bảo kích thước tối thiểu */
+        text-align: center;
+        flex: 1; /* Cho phép các button chia đều không gian */
+        max-width: calc(33.33% - 3px); /* Đảm bảo 3 button trên 1 hàng */
+    }
+
+    .item-detail-add-btn {
+        padding: 10px; /* Giảm padding */
+        font-size: 0.9em; /* Giảm từ 1em xuống 0.9em */
+        margin-top: auto; /* Luôn đẩy xuống bottom */
+        flex-shrink: 0;
+    }
+    
+    /* Tối ưu cho màn hình rất nhỏ */
+    @media (max-width: 480px) {
+        .item-detail-content {
+            max-height: 85vh; /* Giảm thêm chiều cao */
+        }
+        
+        .item-detail-image {
+            width: 35%; /* Giảm thêm một chút */
+            /* Loại bỏ min-height để ảnh tự động điều chỉnh */
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .item-detail-info {
+            width: 65%;
+            padding: 12px;
+            height: 100%;
+        }
+        
+        .item-detail-name {
+            font-size: 1.2em;
+            flex-shrink: 0;
+        }
+        
+        .item-option-btn {
+            padding: 5px 6px;
+            font-size: 0.75em;
+            min-width: 50px;
+        }
+        
+        .item-detail-add-btn {
+            padding: 8px;
+            font-size: 0.85em;
+            margin-top: auto;
+            flex-shrink: 0;
+        }
+    }
+}
+
+.cart-gram-input {
+    width: 70px;
+    padding: 6px 8px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-right: 4px;
+    text-align: right;
+}
+
+.price-display {
+    color: #c62828;
+    font-weight: bold;
+    font-size: 1em;
+    margin-left: 8px;
+}
+
+.input-error {
+    border: 2px solid #e53935 !important;
+}
+
+/* Language Switcher */
+#lang-switcher-container {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    z-index: 2001;
+}
+
+.custom-dropdown {
+    position: relative;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 8px;
+    padding: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    cursor: pointer;
+    min-width: 120px;
+    transition: all 0.3s ease;
+}
+
+.custom-dropdown:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.dropdown-selected {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: background-color 0.2s;
+}
+
+.flag {
+    font-size: 1.2em;
+    width: 20px;
+    text-align: center;
+}
+
+.lang-text {
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+.dropdown-arrow {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px;
+    color: #666;
+    transition: transform 0.3s ease;
+}
+
+.custom-dropdown.open .dropdown-arrow {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.dropdown-options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    margin-top: 4px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 2002;
+}
+
+.custom-dropdown.open .dropdown-options {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 12px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.dropdown-option:hover {
+    background-color: #f5f5f5;
+}
+
+.dropdown-option:first-child {
+    border-radius: 8px 8px 0 0;
+}
+
+.dropdown-option:last-child {
+    border-radius: 0 0 8px 8px;
+}
+
+/* Responsive cho language switcher */
+@media (max-width: 768px) {
+    #lang-switcher-container {
+        top: 15px;
+        right: 20px;
+    }
+    
+    .custom-dropdown {
+        padding: 6px;
+        min-width: 100px;
+    }
+    
+    .flag {
+        width: 20px;
+    }
+    
+    .lang-text {
+        font-size: 0.9em;
+    }
+}
+
+/* Responsive cho cart modal */
+@media (max-width: 768px) {
+    .cart-content {
+        width: 95%;
+        height: 80vh;
+        border-radius: 12px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    }
+    
+    .cart-header {
+        padding: 20px;
+        border-radius: 12px 12px 0 0;
+    }
+    
+    .cart-header h2 {
+        font-size: 24px;
+    }
+    
+    .cart-close {
+        font-size: 28px;
+    }
+    
+    .cart-items {
+        padding: 20px;
+    }
+    
+    .cart-item {
+        gap: 12px;
+        padding: 12px 0;
+    }
+    
+    .cart-item-image {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .cart-item-image .no-image {
+        font-size: 0.7em;
+    }
+    
+    .cart-item-name {
+        font-size: 16px;
+    }
+    
+    .cart-item-price {
+        font-size: 16px;
+    }
+    
+    .quantity-btn {
+        width: 32px;
+        height: 32px;
+        font-size: 16px;
+    }
+    
+    .remove-btn {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+    
+    .cart-total {
+        padding: 20px;
+        font-size: 24px;
+    }
+    
+    .cart-items::-webkit-scrollbar {
+        width: 6px;
+    }
+}
+
+/* Responsive cho màn hình rất nhỏ */
+@media (max-width: 480px) {
+    .item-detail-image {
+        width: 35%; /* Giảm thêm một chút */
+        /* Loại bỏ min-height để ảnh tự động điều chỉnh */
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .item-detail-info {
+        width: 65%;
+        padding: 12px;
+        height: 100%;
+    }
+    
+    .item-detail-name {
+        font-size: 1.2em;
+    }
+    
+    .item-option-btn {
+        padding: 5px 6px;
+        font-size: 0.75em;
+        min-width: 50px;
+    }
+    
+    /* Responsive cho giá trong modal chi tiết trên màn hình nhỏ */
+    .item-detail-info .item-detail-unit-price {
+        font-size: 1em !important; /* Giảm thêm từ 1.2em xuống 1em */
+        margin-top: 8px !important; /* Giảm thêm margin top */
+    }
+}
+
+/* Test button */
+.test-button {
+    position: fixed;
+    bottom: 120px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #ff6b35;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.test-button:hover {
+    transform: scale(1.1);
+    background: #e55a2b;
+}
+
+/* Clear chat button */
+.clear-chat-button {
+    position: fixed;
+    bottom: 190px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #dc3545;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.clear-chat-button:hover {
+    transform: scale(1.1);
+    background: #c82333;
+}
+
+/* Ollama test button */
+.ollama-test-button {
+    position: fixed;
+    bottom: 260px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #17a2b8;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.ollama-test-button:hover {
+    transform: scale(1.1);
+    background: #138496;
+}
+
+@media (max-width: 768px) {
+    .test-button {
+        bottom: 140px;
+        right: 15px;
+        width: 50px;
+        height: 50px;
+        font-size: 14px;
+    }
+    
+    .clear-chat-button {
+        bottom: 200px;
+        right: 15px;
+        width: 50px;
+        height: 50px;
+        font-size: 14px;
+    }
+    
+    .ollama-test-button {
+        bottom: 260px;
+        right: 15px;
+        width: 50px;
+        height: 50px;
+        font-size: 14px;
+    }
+}
+
+/* Toast Notification System */
+.toast-container {
+    position: fixed;
+    bottom: 180px; /* Vị trí gần bong bóng chat, trên chatbot */
+    right: 20px;
+    z-index: 10000; /* Cao hơn tất cả các element khác */
+    pointer-events: none;
+    width: 300px; /* Giới hạn chiều rộng */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+.toast-message {
+    background: #524fe0; /* Đồng bộ với nút thêm món và chat */
+    color: white;
+    padding: 12px 16px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.18);
+    max-width: 300px;
+    min-width: 250px;
+    word-wrap: break-word;
+    font-size: 14px;
+    line-height: 1.4;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.3s ease;
+    pointer-events: auto;
+    position: relative;
+    overflow: visible;
+    cursor: pointer;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.toast-message.show {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+}
+
+.toast-message.hide {
+    opacity: 0;
+    transform: translateX(100%) scale(0.95);
+}
+
+.toast-message:hover {
+    transform: translateX(0) scale(1.02);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+}
+
+.toast-message.bot {
+    background: #524fe0; /* Đồng bộ với nút thêm món và chat */
+}
+
+.toast-message.user {
+    background: #28a745; /* Giữ màu xanh cho user */
+}
+
+.toast-message-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.toast-message-icon {
+    font-size: 16px;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.toast-message-text {
+    flex: 1;
+}
+
+.toast-message-time {
+    font-size: 11px;
+    opacity: 0.8;
+    margin-top: 4px;
+    text-align: right;
+}
+
+.toast-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    background: rgba(255, 255, 255, 0.3);
+    width: 100%;
+    transform-origin: left;
+    animation: toastProgress 8s linear;
+}
+
+.toast-progress.hide {
+    animation: none;
+    opacity: 0;
+    transition: opacity 0.1s ease;
+}
+
+@keyframes toastProgress {
+    from { transform: scaleX(1); }
+    to { transform: scaleX(0); }
+}
+
+/* Mobile responsive for toast */
+@media (max-width: 768px) {
+    .toast-container {
+        bottom: 160px;
+        right: 10px;
+        left: auto;
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 8px;
+    }
+    .toast-message {
+        width: 60%;
+        max-width: 100vw;
+        min-width: 0;
+        margin-bottom: 8px;
+        padding: 10px 14px;
+        font-size: 13px;
+        border-radius: 10px;
+        box-sizing: border-box;
+    }
+}
+
+@media (max-width: 480px) {
+    .toast-container {
+        bottom: 150px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        align-items: center;
+    }
+    .toast-message {
+        width: 90%;
+        max-width: 100vw;
+        min-width: 0;
+        padding: 8px 12px;
+        font-size: 12px;
+        margin-bottom: 6px;
+        box-sizing: border-box;
+    }
+} 

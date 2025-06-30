@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hai san Tri Hang Menu</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1 id="restaurant-name">Hai San Tri Hang</h1>
+        <div id="opening-hours"></div>
+        <!-- Language Switcher -->
+        <div id="lang-switcher-container">
+            <div id="lang-switcher" class="custom-dropdown">
+                <div class="dropdown-selected lang-button">
+                    <span class="flag">🇺🇸</span>
+                    <span class="lang-text">English</span>
+                </div>
+                <div class="dropdown-arrow">▼</div>
+                <div class="dropdown-options">
+                    <div class="dropdown-option" data-value="en">
+                        <span class="flag">🇺🇸</span>
+                        <span>English</span>
+                    </div>
+                    <div class="dropdown-option" data-value="vi">
+                        <span class="flag">🇻🇳</span>
+                        <span>Tiếng Việt</span>
+                    </div>
+                    <div class="dropdown-option" data-value="th">
+                        <span class="flag">🇹🇭</span>
+                        <span>ไทย</span>
+                    </div>
+                    <div class="dropdown-option" data-value="zh">
+                        <span class="flag">🇨🇳</span>
+                        <span>中文</span>
+                    </div>
+                    <div class="dropdown-option" data-value="ko">
+                        <span class="flag">🇰🇷</span>
+                        <span>한국어</span>
+                    </div>
+                    <div class="dropdown-option" data-value="ja">
+                        <span class="flag">🇯🇵</span>
+                        <span>日本語</span>
+                    </div>
+                    <div class="dropdown-option" data-value="ru">
+                        <span class="flag">🇷🇺</span>
+                        <span>Русский</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <nav id="category-nav"></nav>
+    
+    <main id="menu-container">
+        <!-- Menu will be loaded here by JavaScript -->
+    </main>
+    
+    <!-- Nút giỏ hàng -->
+    <button id="cart-button" class="cart-button" title="Giỏ hàng">
+        <span class="cart-text">Cart</span>
+        <span id="cart-total-display" class="cart-total-display">0đ</span>
+    </button>
+
+    <!-- Nút Lên đầu trang -->
+    <button id="scroll-to-top">▲</button>
+    
+    <!-- Test button for lobster notification -->
+    <button id="test-lobster-btn" class="test-button" title="Test Lobster Notification" onclick="testLobsterNotification()">
+        🦞 Test
+    </button>
+    
+    <!-- Reset special notifications button -->
+    <button id="reset-notifications-btn" class="test-button" title="Reset Special Notifications" onclick="resetSpecialNotifications()">
+        🔄 Reset
+    </button>
+    
+    <!-- Clear chat data button -->
+    <button id="clear-chat-btn" class="clear-chat-button" title="Clear Chat Data" onclick="clearChatData()">
+        🗑️ Clear
+    </button>
+    
+    <!-- Ollama connection test button -->
+    <button class="ollama-test-button" onclick="testOllamaConnection()">
+        🤖
+    </button>
+    
+    <!-- Modal giỏ hàng -->
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <button id="delete-all-btn" class="cart-action-btn delete-all-btn">Delete</button>
+                <h2>Giỏ hàng</h2>
+                <button class="cart-close" id="cart-close">&times;</button>
+            </div>
+            <div id="cart-items" class="cart-items">
+                <!-- Các món trong giỏ hàng sẽ được thêm vào đây -->
+            </div>
+            <div id="cart-total" class="cart-total">
+                Tổng: 0đ
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal Chi tiết Món ăn -->
+    <div id="item-detail-modal" class="item-detail-modal">
+        <div class="item-detail-content">
+            <button id="item-detail-close" class="item-detail-close">&times;</button>
+            <div id="item-detail-body" class="item-detail-body">
+                <!-- Nội dung chi tiết sẽ được JS chèn vào đây -->
+            </div>
+        </div>
+    </div>
+    
+    <!-- Chatbot -->
+    <div class="chatbot-container" id="chatbot-container">
+        <!-- Chat Button -->
+        <div class="chat-button" id="chat-button">
+            <i class="fas fa-comments"></i>
+            <span class="chat-notification" id="chat-notification" style="display: none;">1</span>
+        </div>
+        
+        <!-- Chat Window -->
+        <div class="chat-window" id="chat-window">
+            <div class="chat-header">
+                <div class="chat-title">
+                    <i class="fas fa-robot"></i>
+                    <span>Restaurant Assistant</span>
+                </div>
+                <button class="chat-close" id="chat-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="chat-messages" id="chat-messages">
+                <div class="message bot-message">
+                    <div class="message-content">
+                        <i class="fas fa-robot"></i>
+                        <div class="message-text">
+                            Xin chào! Tôi có thể giúp gì cho bạn? Bạn có thể hỏi về menu, đặt món, hoặc tìm hiểu thông tin nhà hàng.
+                        </div>
+                    </div>
+                    <div class="message-time">Bây giờ</div>
+                </div>
+            </div>
+            <div class="chat-input-container">
+                <input type="text" id="chat-input" placeholder="Nhập tin nhắn..." maxlength="500">
+                <button id="chat-send">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Toast Notification Container -->
+    <div id="toast-container" class="toast-container"></div>
+    
+    <script src="ollama-config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

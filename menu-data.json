@@ -1,0 +1,264 @@
+{
+  "restaurantName": "Hai san Tri Hang",
+  "openingHours": [
+    { "day": "Monday", "hours": "08:00 — 21:00" },
+    { "day": "Tuesday", "hours": "08:00 — 21:00" },
+    { "day": "Wednesday", "hours": "08:00 — 21:00" },
+    { "day": "Thursday", "hours": "08:00 — 21:00" },
+    { "day": "Friday", "hours": "08:00 — 21:00" },
+    { "day": "Saturday", "hours": "08:00 — 21:00" },
+    { "day": "Sunday", "hours": "08:00 — 21:00" }
+  ],
+  "menu": [
+    {
+      "category": "drinks",
+      "items": [
+        { "id": "larue_smooth", "price": 15000, "unit": "1 pcs", "image": "images/bia-larue-smooth-330ml.jpg" },
+        { "id": "tiger_crystal", "price": 20000, "unit": "1 pcs", "image": "images/bia-tiger-bac.jpg" },
+        { "id": "heineken", "price": 23000, "unit": "1 pcs", "image": "images/heineken.jpg" },
+        { "id": "coca_cola", "price": 15000, "unit": "1 pcs", "image": "images/coca.jpg" },
+        { "id": "sprite", "price": 15000, "unit": "1 pcs", "image": "images/SPRITE.jpg" },
+        { "id": "fanta", "price": 15000, "unit": "1 pcs", "image": "images/fanta.jpg" },
+        { "id": "dasani_water", "price": 8000, "unit": "1 pcs", "image": "images/Dasani-350ml (1).jpg" },
+        { "id": "huda", "price": 15000, "unit": "1 pcs", "image": "images/huda (1).jpg" },
+        { "id": "red_bull", "price": 18000, "unit": "1 pcs", "image": "images/huc (1).jpg" },
+        { "id": "sparkling_mineral_water", "price": 10000, "unit": "1 pcs", "image": "images/khoang (1).jpg" }
+      ]
+    },
+    {
+      "category": "salad",
+      "items": [
+        { "id": "fish_salad", "price": 90000, "unit": "1 pcs", "image": "images/goicalac.jpg" },
+        { "id": "melo_melo_sea_snail_salad", "price": 120000, "unit": "1 pcs" },
+        { "id": "jellyfish_salad", "price": 80000, "unit": "1 pcs" },
+        { "id": "beef_salad", "price": 100000, "unit": "1 pcs" },
+        { "id": "seafood_salad", "price": 100000, "unit": "1 pcs", "image": "images/goimucchuacay.jpg" },
+        { "id": "chicken_wing_stir_fried_fish_sauce", "price": 80000 }
+      ]
+    },
+    {
+      "category": "main_course",
+      "items": [
+        { "id": "seafood_fried_rice", "price": 90000, "unit": "1 pcs" },
+        { "id": "egg_fried_rice", "price": 60000, "unit": "1 pcs" },
+        { "id": "seafood_stir_fried_noodles", "price": 100000, "unit": "1 pcs", "image": "images/mixaohaisan.jpg" },
+        { "id": "beef_stir_fried_noodles", "price": 100000, "unit": "1 pcs" },
+        { "id": "porridge", "price": 100000, "unit": "1 pcs", "priceType": "from" }
+      ]
+    },
+    {
+      "category": "vegetable",
+      "items": [
+        { "id": "stir_fried_morning_glory_garlic", "price": 50000, "unit": "1 pcs" },
+        { "id": "stir_fried_wild_vegetables_garlic", "price": 50000, "unit": "1 pcs" }
+      ]
+    },
+    {
+      "category": "types_of_oysters",
+      "items": [
+        { "id": "grilled_scallops_onion", "price": 80000, "unit": "6 pcs" },
+        { "id": "cheese_baked_scallops", "price": 80000, "unit": "6 pcs" },
+        { "id": "grilled_oysters_onion", "price": 90000, "unit": "5 pcs" },
+        { "id": "cheese_baked_oysters", "price": 90000, "unit": "5 pcs" },
+        { "id": "sashimi_oyster", "price": 100000, "unit": "5 pcs" },
+        { "id": "steamed_clams", "price": 110000, "unit": "500 gr" },
+        { "id": "grilled_clams", "price": 120000, "unit": "500 gr" },
+        { "id": "steamed_so_duong", "price": 150000, "unit": "500 gr" },
+        { "id": "grilled_so_duong", "price": 150000, "unit": "500 gr", "image": "images/soduongnuong.jpg" },
+        { "id": "steamed_so_bum", "price": 100000, "unit": "500 gr" },
+        { "id": "grilled_so_bum", "price": 110000, "unit": "500 gr" },
+        { "id": "steamed_so_mia", "price": 110000, "unit": "500 gr", "image": "images/somiahap.jpg" },
+        { "id": "grilled_so_mia", "price": 130000, "unit": "500 gr" },
+        { "id": "grilled_mussels", "price": 160000, "unit": "1000 gr" },
+        { "id": "steamed_chips", "price": 100000, "unit": "350 gr" },
+        { "id": "steamed_cockles", "price": 125000, "unit": "500 gr", "priceType": "from" },
+        { "id": "self_baked_humor", "price": 250000, "unit": "500 gr" },
+        {
+          "id": "grilled_coi_may",
+          "priceType": "options",
+          "unit": "1 pcs",
+          "options": [
+            { "id": "grilled_coi_may_small", "price": 40000, "size": "small" },
+            { "id": "grilled_coi_may_medium", "price": 60000, "size": "medium" },
+            { "id": "grilled_coi_may_large", "price": 70000, "size": "large" }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "type_of_snails",
+      "items": [
+        { "id": "steamed_sweet_snails", "price": 300000, "unit": "500 gr" },
+        { "id": "garlic_butter_sweet_snails", "price": 325000, "unit": "500 gr" },
+        { "id": "steamed_spiny_sea_snails", "price": 130000, "unit": "500 gr" },
+        { "id": "sauteed_chili_spiny_sea_snails", "price": 150000, "unit": "500 gr", "image": "images/OcGaiXaoSaOt.jpg" },
+        { "id": "mud_creeper_sea_snails_coconut_sauce", "price": 80000, "unit": "1 pcs" }
+      ]
+    },
+    {
+      "category": "types_of_squids",
+      "items": [
+        { "id": "steamed_baby_squid", "price": 150000, "unit": "1 pcs" },
+        { "id": "fried_baby_squid_fish_sauce", "price": 150000, "unit": "1 pcs", "image": "images/muccomchienmam.jpg" },
+        {
+          "id": "steamed_needle_squid",
+          "image": "images/muc-ong-hap.jpg",
+          "priceType": "per_kg",
+          "pricePerKg": 500000,
+          "minWeightGram": 500,
+          "options": [{ "weightGram": 500 }, { "weightGram": 600 }, { "weightGram": 700 }]
+        },
+        {
+          "id": "grilled_needle_squid",
+          "image": "images/muc-ong-nuong.jpg",
+          "priceType": "per_kg",
+          "pricePerKg": 500000,
+          "minWeightGram": 500,
+          "options": [{ "weightGram": 500 }, { "weightGram": 600 }, { "weightGram": 700 }]
+        },
+        {
+          "id": "steamed_broad_squid",
+          "image": "images/muc-la-hap.jpg",
+          "priceType": "per_kg",
+          "pricePerKg": 550000,
+          "minWeightGram": 500,
+          "options": [{ "weightGram": 500 }, { "weightGram": 600 }, { "weightGram": 700 }]
+        },
+        {
+          "id": "grilled_broad_squid",
+          "image": "images/muc-la-nuong.jpg",
+          "priceType": "per_kg",
+          "pricePerKg": 550000,
+          "minWeightGram": 500,
+          "options": [{ "weightGram": 500 }, { "weightGram": 600 }, { "weightGram": 700 }]
+        }
+      ]
+    },
+    {
+      "category": "lobster",
+      "items": [
+        {
+          "id": "tri_hang_special_lobster",
+          "image": "images/tom-hum-sot-tri-hang.jpg",
+          "priceType": "per_kg",
+          "pricePerKg": 1600000,
+          "minWeightGram": 700,
+          "options": [{ "weightGram": 700 }, { "weightGram": 800 }, { "weightGram": 900 }]
+        },
+        {
+          "id": "grilled_lobster_cheese",
+          "image": "images/tom-hum-nuong-phomai.jpg",
+          "priceType": "per_kg",
+          "pricePerKg": 1600000,
+          "minWeightGram": 700,
+          "options": [{ "weightGram": 700 }, { "weightGram": 800 }, { "weightGram": 900 }]
+        },
+        {
+          "id": "garlic_butter_lobster",
+          "image": "images/tom-hum-sot-bo-toi.jpg",
+          "priceType": "per_kg",
+          "pricePerKg": 1600000,
+          "minWeightGram": 700,
+          "options": [{ "weightGram": 700 }, { "weightGram": 800 }, { "weightGram": 900 }]
+        },
+        {
+          "id": "steamed_lobster",
+          "image": "images/tom-hum-hap.jpg",
+          "priceType": "per_kg",
+          "pricePerKg": 1600000,
+          "minWeightGram": 700,
+          "options": [{ "weightGram": 700 }, { "weightGram": 800 }, { "weightGram": 900 }]
+        },
+        {
+          "id": "grilled_lobster",
+          "image": "images/tom-hum-nuong-moi.jpg",
+          "priceType": "per_kg",
+          "pricePerKg": 1600000,
+          "minWeightGram": 700,
+          "options": [{ "weightGram": 700 }, { "weightGram": 800 }, { "weightGram": 900 }]
+        }
+      ]
+    },
+    {
+      "category": "mantis_shrimp",
+      "items": [
+        { "id": "steamed_mantis_shrimp", "price": 275000, "unit": "500 gr" },
+        { "id": "mantis_shrimp_garlic_butter_sauce", "price": 300000, "unit": "500 gr" },
+        { "id": "mantis_shrimp_tamarind_sauce", "price": 300000, "unit": "500 gr" },
+        { "id": "tri_hang_special_mantis_shrimp", "price": 300000, "unit": "500 gr" },
+        { "id": "mantis_shrimp_roasted_fish_sauce", "price": 300000, "unit": "500 gr" }
+      ]
+    },
+    {
+      "category": "tiger_shrimp",
+      "items": [
+        { "id": "grilled_tiger_shrimp", "price": 325000, "unit": "500 gr" },
+        { "id": "steamed_tiger_shrimp", "price": 325000, "unit": "500 gr" },
+        { "id": "sashimi_tiger_shrimp", "price": 350000, "unit": "500 gr" },
+        { "id": "garlic_butter_tiger_shrimp", "price": 350000, "unit": "500 gr" },
+        { "id": "tiger_shrimp_tamarind_sauce", "price": 350000, "unit": "500 gr" },
+        { "id": "tri_hang_special_tiger_shrimp", "price": 350000, "unit": "500 gr", "image": "images/tomsutrihang.jpg" }
+      ]
+    },
+    {
+      "category": "crabs",
+      "items": [
+        { "id": "steamed_blue_crab", "price": 300000, "unit": "500 gr", "image": "images/cuahap.jpg" },
+        { "id": "blue_crab_tamarind_sauce", "price": 325000, "unit": "500 gr" },
+        { "id": "tri_hang_special_sauce_crab", "price": 325000, "unit": "500 gr", "image": "images/ghetrihang.jpg" },
+        { "id": "blue_crab_garlic_butter_sauce", "price": 325000, "unit": "500 gr" }
+      ]
+    },
+    {
+      "category": "sea_crab",
+      "items": [
+        { "id": "steamed_sea_crab", "price": 375000, "unit": "500 gr" },
+        { "id": "sea_crab_tamarind_sauce", "price": 400000, "unit": "500 gr" },
+        { "id": "roasted_sea_crab_fish_sauce", "price": 400000, "unit": "500 gr" }
+      ]
+    },
+    {
+      "category": "grilled_fish",
+      "items": [
+        { "id": "grilled_termite_fish", "price": 70000, "unit": "200 gr" },
+        {
+          "id": "grilled_blue_bone_throbbing_fish",
+          "image": "images/ca-nhoi-nuong.jpg",
+          "priceType": "per_kg",
+          "pricePerKg": 350000,
+          "minWeightGram": 600,
+          "options": [{ "weightGram": 600 }, { "weightGram": 700 }, { "weightGram": 800 }]
+        },
+        {
+          "id": "grilled_lime_key_fish",
+          "image": "images/ca-chia-voi-nuong.jpg",
+          "priceType": "per_kg",
+          "pricePerKg": 600000,
+          "minWeightGram": 700,
+          "options": [{ "weightGram": 700 }, { "weightGram": 800 }, { "weightGram": 900 }]
+        },
+        {
+          "id": "grilled_betel_nut_fish",
+          "image": "images/ca-ba-trau-nuong.jpg",
+          "priceType": "per_kg",
+          "pricePerKg": 450000,
+          "minWeightGram": 400,
+          "options": [{ "weightGram": 400 }, { "weightGram": 500 }, { "weightGram": 600 }]
+        }
+      ]
+    },
+    {
+      "category": "hotpot",
+      "items": [
+        { "id": "fish_hotpot", "price": 150000, "unit": "1 pcs", "priceType": "from" }
+      ]
+    },
+    {
+      "category": "other",
+      "items": [
+        { "id": "cold_napkin", "price": 5000 },
+        { "id": "bread", "price": 5000, "unit": "1 pcs" }
+      ]
+    }
+  ]
+} 
