@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Debug</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+        .debug-info {
+            background: #f0f0f0;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        .test-button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .test-button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Chatbot Debug Test</h1>
+    
+    <div class="debug-info">
+        <h3>Debug Information:</h3>
+        <div id="debug-output">Loading...</div>
+    </div>
+    
+    <div>
+        <button class="test-button" onclick="testChatButton()">Test Chat Button Click</button>
+        <button class="test-button" onclick="testChatWindow()">Test Chat Window Display</button>
+        <button class="test-button" onclick="testElements()">Test Element Selection</button>
+        <button class="test-button" onclick="clearDebug()">Clear Debug</button>
+    </div>
+    
+    <!-- Chatbot -->
+    <div class="chatbot-container" id="chatbot-container">
+        <!-- Chat Button -->
+        <div class="chat-button" id="chat-button">
+            <i class="fas fa-comments"></i>
+            <span class="chat-notification" id="chat-notification" style="display: none;">1</span>
+        </div>
+        
+        <!-- Chat Window -->
+        <div class="chat-window" id="chat-window">
+            <div class="chat-header">
+                <div class="chat-title">
+                    <i class="fas fa-robot"></i>
+                    <span>Restaurant Assistant</span>
+                </div>
+                <button class="chat-close" id="chat-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="chat-messages" id="chat-messages">
+                <div class="message bot-message">
+                    <div class="message-content">
+                        <i class="fas fa-robot"></i>
+                        <div class="message-text">
+                            Xin chào! Tôi có thể giúp gì cho bạn? Bạn có thể hỏi về menu, đặt món, hoặc tìm hiểu thông tin nhà hàng.
+                        </div>
+                    </div>
+                    <div class="message-time">Bây giờ</div>
+                </div>
+            </div>
+            <div class="chat-input-container">
+                <input type="text" id="chat-input" placeholder="Nhập tin nhắn..." maxlength="500">
+                <button id="chat-send">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function log(message) {
+            const debugOutput = document.getElementById('debug-output');
+            const timestamp = new Date().toLocaleTimeString();
+            debugOutput.innerHTML += `<div>[${timestamp}] ${message}</div>`;
+            console.log(message);
+        }
+        
+        function clearDebug() {
+            document.getElementById('debug-output').innerHTML = '';
+        }
+        
+        function testElements() {
+            log('Testing element selection...');
+            
+            const chatButton = document.getElementById('chat-button');
+            const chatWindow = document.getElementById('chat-window');
+            const chatClose = document.getElementById('chat-close');
+            const chatMessages = document.getElementById('chat-messages');
+            const chatInput = document.getElementById('chat-input');
+            const chatSend = document.getElementById('chat-send');
+            
+            log(`chatButton: ${chatButton ? 'Found' : 'NOT FOUND'}`);
+            log(`chatWindow: ${chatWindow ? 'Found' : 'NOT FOUND'}`);
+            log(`chatClose: ${chatClose ? 'Found' : 'NOT FOUND'}`);
+            log(`chatMessages: ${chatMessages ? 'Found' : 'NOT FOUND'}`);
+            log(`chatInput: ${chatInput ? 'Found' : 'NOT FOUND'}`);
+            log(`chatSend: ${chatSend ? 'Found' : 'NOT FOUND'}`);
+            
+            if (chatWindow) {
+                log(`chatWindow display: ${window.getComputedStyle(chatWindow).display}`);
+                log(`chatWindow classes: ${chatWindow.className}`);
+            }
+        }
+        
+        function testChatButton() {
+            log('Testing chat button click...');
+            const chatButton = document.getElementById('chat-button');
+            if (chatButton) {
+                chatButton.click();
+                log('Chat button clicked');
+            } else {
+                log('ERROR: Chat button not found');
+            }
+        }
+        
+        function testChatWindow() {
+            log('Testing chat window display...');
+            const chatWindow = document.getElementById('chat-window');
+            if (chatWindow) {
+                const currentDisplay = window.getComputedStyle(chatWindow).display;
+                log(`Current display: ${currentDisplay}`);
+                
+                if (currentDisplay === 'none') {
+                    chatWindow.style.display = 'flex';
+                    log('Set display to flex');
+                } else {
+                    chatWindow.style.display = 'none';
+                    log('Set display to none');
+                }
+            } else {
+                log('ERROR: Chat window not found');
+            }
+        }
+        
+        // Initialize when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            log('Page loaded, testing elements...');
+            testElements();
+            
+            // Add event listeners for testing
+            const chatButton = document.getElementById('chat-button');
+            const chatClose = document.getElementById('chat-close');
+            
+            if (chatButton) {
+                chatButton.addEventListener('click', () => {
+                    log('Chat button clicked via event listener');
+                    const chatWindow = document.getElementById('chat-window');
+                    if (chatWindow) {
+                        chatWindow.classList.toggle('active');
+                        log(`Chat window active class toggled. Current classes: ${chatWindow.className}`);
+                    }
+                });
+            }
+            
+            if (chatClose) {
+                chatClose.addEventListener('click', () => {
+                    log('Chat close button clicked');
+                    const chatWindow = document.getElementById('chat-window');
+                    if (chatWindow) {
+                        chatWindow.classList.remove('active');
+                        log('Chat window active class removed');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html> 

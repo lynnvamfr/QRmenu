@@ -8,49 +8,50 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <h1 id="restaurant-name">Hai San Tri Hang</h1>
-        <div id="opening-hours"></div>
-        <!-- Language Switcher -->
-        <div id="lang-switcher-container">
-            <div id="lang-switcher" class="custom-dropdown">
-                <div class="dropdown-selected lang-button">
+    <!-- Language Switcher -->
+    <div id="lang-switcher-container">
+        <div id="lang-switcher" class="custom-dropdown">
+            <div class="dropdown-selected lang-button">
+                <span class="flag">🇺🇸</span>
+                <span class="lang-text">English</span>
+            </div>
+            <div class="dropdown-arrow">▼</div>
+            <div class="dropdown-options">
+                <div class="dropdown-option" data-value="en">
                     <span class="flag">🇺🇸</span>
-                    <span class="lang-text">English</span>
+                    <span>English</span>
                 </div>
-                <div class="dropdown-arrow">▼</div>
-                <div class="dropdown-options">
-                    <div class="dropdown-option" data-value="en">
-                        <span class="flag">🇺🇸</span>
-                        <span>English</span>
-                    </div>
-                    <div class="dropdown-option" data-value="vi">
-                        <span class="flag">🇻🇳</span>
-                        <span>Tiếng Việt</span>
-                    </div>
-                    <div class="dropdown-option" data-value="th">
-                        <span class="flag">🇹🇭</span>
-                        <span>ไทย</span>
-                    </div>
-                    <div class="dropdown-option" data-value="zh">
-                        <span class="flag">🇨🇳</span>
-                        <span>中文</span>
-                    </div>
-                    <div class="dropdown-option" data-value="ko">
-                        <span class="flag">🇰🇷</span>
-                        <span>한국어</span>
-                    </div>
-                    <div class="dropdown-option" data-value="ja">
-                        <span class="flag">🇯🇵</span>
-                        <span>日本語</span>
-                    </div>
-                    <div class="dropdown-option" data-value="ru">
-                        <span class="flag">🇷🇺</span>
-                        <span>Русский</span>
-                    </div>
+                <div class="dropdown-option" data-value="vi">
+                    <span class="flag">🇻🇳</span>
+                    <span>Tiếng Việt</span>
+                </div>
+                <div class="dropdown-option" data-value="th">
+                    <span class="flag">🇹🇭</span>
+                    <span>ไทย</span>
+                </div>
+                <div class="dropdown-option" data-value="zh">
+                    <span class="flag">🇨🇳</span>
+                    <span>中文</span>
+                </div>
+                <div class="dropdown-option" data-value="ko">
+                    <span class="flag">🇰🇷</span>
+                    <span>한국어</span>
+                </div>
+                <div class="dropdown-option" data-value="ja">
+                    <span class="flag">🇯🇵</span>
+                    <span>日本語</span>
+                </div>
+                <div class="dropdown-option" data-value="ru">
+                    <span class="flag">🇷🇺</span>
+                    <span>Русский</span>
                 </div>
             </div>
         </div>
+    </div>
+    
+    <header>
+        <h1 id="restaurant-name">Hai San Tri Hang</h1>
+        <div id="opening-hours"></div>
     </header>
     
     <nav id="category-nav"></nav>
@@ -68,24 +69,9 @@
     <!-- Nút Lên đầu trang -->
     <button id="scroll-to-top">▲</button>
     
-    <!-- Test button for lobster notification -->
-    <button id="test-lobster-btn" class="test-button" title="Test Lobster Notification" onclick="testLobsterNotification()">
-        🦞 Test
-    </button>
-    
-    <!-- Reset special notifications button -->
-    <button id="reset-notifications-btn" class="test-button" title="Reset Special Notifications" onclick="resetSpecialNotifications()">
+    <!-- Reset special notifications button (hidden) -->
+    <button id="reset-notifications-btn" class="test-button hidden" title="Reset Special Notifications" onclick="resetSpecialNotifications()">
         🔄 Reset
-    </button>
-    
-    <!-- Clear chat data button -->
-    <button id="clear-chat-btn" class="clear-chat-button" title="Clear Chat Data" onclick="clearChatData()">
-        🗑️ Clear
-    </button>
-    
-    <!-- Ollama connection test button -->
-    <button class="ollama-test-button" onclick="testOllamaConnection()">
-        🤖
     </button>
     
     <!-- Modal giỏ hàng -->
@@ -115,12 +101,22 @@
         </div>
     </div>
     
+
+    
     <!-- Chatbot -->
     <div class="chatbot-container" id="chatbot-container">
-        <!-- Chat Button -->
-        <div class="chat-button" id="chat-button">
-            <i class="fas fa-comments"></i>
-            <span class="chat-notification" id="chat-notification" style="display: none;">1</span>
+        <!-- Chat Button Container -->
+        <div class="chat-button-container" id="chat-button-container">
+            <!-- Chat Button -->
+            <div class="chat-button" id="chat-button">
+                <i class="fas fa-comments"></i>
+                <span class="chat-notification" id="chat-notification" style="display: none;">1</span>
+            </div>
+            
+            <!-- Send Button (sẽ hiển thị khi chat mở) -->
+            <button class="chat-send-button" id="chat-send-button">
+                <i class="fas fa-paper-plane"></i>
+            </button>
         </div>
         
         <!-- Chat Window -->
@@ -128,7 +124,7 @@
             <div class="chat-header">
                 <div class="chat-title">
                     <i class="fas fa-robot"></i>
-                    <span>Restaurant Assistant</span>
+                    <span>Restaurant Assistant (Beta)</span>
                 </div>
                 <button class="chat-close" id="chat-close">
                     <i class="fas fa-times"></i>
@@ -138,8 +134,8 @@
                 <div class="message bot-message">
                     <div class="message-content">
                         <i class="fas fa-robot"></i>
-                        <div class="message-text">
-                            Xin chào! Tôi có thể giúp gì cho bạn? Bạn có thể hỏi về menu, đặt món, hoặc tìm hiểu thông tin nhà hàng.
+                        <div class="message-text" id="welcome-message">
+                            Hello! How can I help you? You can ask about our menu, place orders, or learn about our restaurant.
                         </div>
                     </div>
                     <div class="message-time">Bây giờ</div>
@@ -157,7 +153,6 @@
     <!-- Toast Notification Container -->
     <div id="toast-container" class="toast-container"></div>
     
-    <script src="ollama-config.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
