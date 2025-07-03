@@ -272,7 +272,7 @@
     },
     "sea_crab": {
       "en": "Sea Crab",
-      "vi": "Ghẹ biển",
+      "vi": "Cua",
       "th": "ปูทะเล",
       "zh": "海蟹",
       "ko": "바다게",
@@ -985,30 +985,30 @@
     },
     "steamed_sea_crab": {
       "en": "Steamed sea crab",
-      "vi": "Ghẹ Hấp",
+      "vi": "Cua Hấp",
       "th": "ปูทะเลนึ่ง",
       "zh": "蒸海蟹",
       "ko": "바다게 찜",
-      "ja": "海ガニ蒸し",
+      "ja": "海ガニの蒸し物",
       "ru": "Морской краб на пару"
     },
     "sea_crab_tamarind_sauce": {
       "en": "Sea crab with tamarind sauce",
-      "vi": "Ghẹ Sốt Me",
+      "vi": "Cua Sốt Me",
       "th": "ปูทะเลซอสมะขาม",
-      "zh": "罗望子酱海蟹",
-      "ko": "타마린드소스 바다게",
-      "ja": "タマリンドソース海ガニ",
-      "ru": "Морской краб с тамариндом"
+      "zh": "海蟹配罗望子酱",
+      "ko": "바다게 타마린드 소스",
+      "ja": "海ガニのタマリンドソース",
+      "ru": "Морской краб с соусом из тамаринда"
     },
     "roasted_sea_crab_fish_sauce": {
       "en": "Roasted sea crab with fish sauce",
-      "vi": "Ghẹ Rang Mắm",
-      "th": "ปูทะเลคั่วน้ำปลา",
-      "zh": "鱼露烤海蟹",
-      "ko": "피쉬소스 바다게 구이",
-      "ja": "ナンプラー海ガニ焼き",
-      "ru": "Морской краб в рыбном соусе"
+      "vi": "Cua Rang Mắm",
+      "th": "ปูทะเลย่างน้ำปลา",
+      "zh": "烤海蟹配鱼露",
+      "ko": "바다게 생선소스 구이",
+      "ja": "海ガニの魚醤焼き",
+      "ru": "Морской краб с рыбным соусом"
     },
     "grilled_blue_bone_throbbing_fish": {
       "en": "Grilled blue bone throbbing fish",
