@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Fish Translations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .test-section {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .test-item {
+            margin: 10px 0;
+            padding: 10px;
+            background: #f9f9f9;
+            border-radius: 3px;
+        }
+        .success {
+            color: green;
+        }
+        .error {
+            color: red;
+        }
+        .info {
+            color: blue;
+        }
+        .translation-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .translation-table th,
+        .translation-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        .translation-table th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        .translation-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .lang-switcher {
+            margin: 20px 0;
+            padding: 10px;
+            background: #e9e9e9;
+            border-radius: 5px;
+        }
+        .lang-switcher button {
+            margin: 5px;
+            padding: 8px 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background: white;
+            cursor: pointer;
+        }
+        .lang-switcher button.active {
+            background: #007bff;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Test Fish Translations</h1>
+    
+    <div class="lang-switcher">
+        <h3>Chọn ngôn ngữ để test:</h3>
+        <button onclick="switchLanguage('vi')" class="active">Tiếng Việt</button>
+        <button onclick="switchLanguage('en')">English</button>
+        <button onclick="switchLanguage('th')">ไทย</button>
+        <button onclick="switchLanguage('zh')">中文</button>
+        <button onclick="switchLanguage('ko')">한국어</button>
+        <button onclick="switchLanguage('ja')">日本語</button>
+        <button onclick="switchLanguage('ru')">Русский</button>
+    </div>
+    
+    <div class="test-section">
+        <h2>Bản dịch tên các loại cá theo ngôn ngữ: <span id="current-lang">Tiếng Việt</span></h2>
+        <div id="translations-display"></div>
+    </div>
+
+    <div class="test-section">
+        <h2>Bảng so sánh tất cả ngôn ngữ</h2>
+        <div id="comparison-table"></div>
+    </div>
+
+    <script>
+        let currentLang = 'vi';
+        let translations = {};
+
+        // Switch language
+        function switchLanguage(lang) {
+            currentLang = lang;
+            
+            // Update active button
+            document.querySelectorAll('.lang-switcher button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+            
+            // Update current language display
+            const langNames = {
+                'vi': 'Tiếng Việt',
+                'en': 'English',
+                'th': 'ไทย',
+                'zh': '中文',
+                'ko': '한국어',
+                'ja': '日本語',
+                'ru': 'Русский'
+            };
+            document.getElementById('current-lang').textContent = langNames[lang];
+            
+            displayTranslations();
+        }
+
+        // Display translations for current language
+        function displayTranslations() {
+            const fishTypes = [
+                { id: 'fish_hotpot_ca_chim', name: 'Cá Chim', price: 150000 },
+                { id: 'fish_hotpot_ca_mam_thau', name: 'Cá Mâm Thâu', price: 150000 },
+                { id: 'fish_hotpot_ca_bop', name: 'Cá Bớp', price: 170000 },
+                { id: 'fish_hotpot_ca_mu', name: 'Cá Mú', price: 200000 },
+                { id: 'fish_hotpot_ca_duoi', name: 'Cá Đuối', price: 200000 },
+                { id: 'fish_hotpot_ca_cu', name: 'Cá Cu', price: 250000 }
+            ];
+            
+            let results = '';
+            
+            fishTypes.forEach(fish => {
+                const translation = translations.items[fish.id];
+                if (translation && translation[currentLang]) {
+                    results += `<div class="test-item success">
+                        <strong>${fish.name}</strong> (${fish.price.toLocaleString()}đ)<br>
+                        <strong>${currentLang.toUpperCase()}:</strong> ${translation[currentLang]}
+                    </div>`;
+                } else {
+                    results += `<div class="test-item error">
+                        <strong>${fish.name}</strong> (${fish.price.toLocaleString()}đ)<br>
+                        <strong>${currentLang.toUpperCase()}:</strong> Không có bản dịch
+                    </div>`;
+                }
+            });
+            
+            document.getElementById('translations-display').innerHTML = results;
+        }
+
+        // Display comparison table
+        function displayComparisonTable() {
+            const fishTypes = [
+                { id: 'fish_hotpot_ca_chim', name: 'Cá Chim', price: 150000 },
+                { id: 'fish_hotpot_ca_mam_thau', name: 'Cá Mâm Thâu', price: 150000 },
+                { id: 'fish_hotpot_ca_bop', name: 'Cá Bớp', price: 170000 },
+                { id: 'fish_hotpot_ca_mu', name: 'Cá Mú', price: 200000 },
+                { id: 'fish_hotpot_ca_duoi', name: 'Cá Đuối', price: 200000 },
+                { id: 'fish_hotpot_ca_cu', name: 'Cá Cu', price: 250000 }
+            ];
+            
+            const languages = ['vi', 'en', 'th', 'zh', 'ko', 'ja', 'ru'];
+            const langNames = {
+                'vi': 'Tiếng Việt',
+                'en': 'English',
+                'th': 'ไทย',
+                'zh': '中文',
+                'ko': '한국어',
+                'ja': '日本語',
+                'ru': 'Русский'
+            };
+            
+            let tableHTML = `
+                <table class="translation-table">
+                    <thead>
+                        <tr>
+                            <th>Loại cá</th>
+                            <th>Giá</th>
+            `;
+            
+            languages.forEach(lang => {
+                tableHTML += `<th>${langNames[lang]}</th>`;
+            });
+            
+            tableHTML += '</tr></thead><tbody>';
+            
+            fishTypes.forEach(fish => {
+                tableHTML += `<tr>
+                    <td><strong>${fish.name}</strong></td>
+                    <td>${fish.price.toLocaleString()}đ</td>
+                `;
+                
+                languages.forEach(lang => {
+                    const translation = translations.items[fish.id];
+                    const text = translation && translation[lang] ? translation[lang] : 'N/A';
+                    tableHTML += `<td>${text}</td>`;
+                });
+                
+                tableHTML += '</tr>';
+            });
+            
+            tableHTML += '</tbody></table>';
+            
+            document.getElementById('comparison-table').innerHTML = tableHTML;
+        }
+
+        // Load translations
+        async function loadTranslations() {
+            try {
+                const response = await fetch('translations.json');
+                translations = await response.json();
+                
+                displayTranslations();
+                displayComparisonTable();
+                
+                console.log('Translations loaded successfully');
+            } catch (error) {
+                console.error('Error loading translations:', error);
+                document.getElementById('translations-display').innerHTML = 
+                    `<div class="test-item error">✗ Lỗi khi tải translations.json: ${error.message}</div>`;
+            }
+        }
+        
+        // Run on load
+        window.addEventListener('load', loadTranslations);
+    </script>
+</body>
+</html> 

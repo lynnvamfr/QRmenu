@@ -1053,9 +1053,11 @@ header {
     background-color: #45a049;
 }
 
-/* Responsive cho màn hình nhỏ - LUÔN GIỮ 2 CỘT THEO YÊU CẦU */
+/* Responsive cho màn hình nhỏ - CHUYỂN SANG LAYOUT DỌC */
 @media (max-width: 768px) {
-    /* Không đổi flex-direction, để giữ layout 2 cột */
+    .item-detail-body {
+        flex-direction: column; /* Chuyển sang layout dọc */
+    }
 
     .item-detail-content {
         width: 95%; /* Cho modal rộng hơn một chút trên mobile */
@@ -1063,64 +1065,77 @@ header {
     }
 
     .item-detail-image {
-        width: 40%; /* Ảnh chiếm 40% theo yêu cầu */
-        /* Loại bỏ min-height để ảnh tự động điều chỉnh */
+        width: 100%; /* Ảnh chiếm toàn bộ chiều rộng */
+        height: 200px; /* Chiều cao cố định cho ảnh */
         background-size: cover;
         background-position: center;
+        flex-shrink: 0;
     } 
     
     .item-detail-info {
-        width: 60%; /* Thông tin chiếm 60% */
-        padding: 15px; /* Giảm padding cho vừa vặn */
+        width: 100%; /* Thông tin chiếm toàn bộ chiều rộng */
+        padding: 20px; /* Tăng padding cho dễ đọc */
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        height: 100%;
-        min-height: 200px;
+        height: auto;
+        min-height: auto;
         flex: 1;
     }
     
-    /* Giảm kích thước font chữ và các thành phần để vừa với không gian hẹp */
+    /* Tăng kích thước font chữ cho layout dọc */
     .item-detail-name {
-        font-size: 1.3em; /* Giảm từ 1.6em xuống 1.3em */
-        margin-bottom: 3px; /* Giảm margin */
-        line-height: 1.2;
+        font-size: 1.6em; /* Tăng kích thước font cho dễ đọc */
+        margin-bottom: 10px; /* Tăng margin */
+        line-height: 1.3;
         flex-shrink: 0;
     }
     
     .item-detail-unit-price {
-        font-size: 0.9em; /* Giảm từ 1em xuống 0.9em */
-        margin-bottom: 12px; /* Giảm margin */
+        font-size: 1.1em; /* Tăng kích thước font */
+        margin-bottom: 15px; /* Tăng margin */
         flex-shrink: 0;
     }
 
     .item-options-title {
-        font-size: 0.9em; /* Giảm từ 1em xuống 0.9em */
-        margin-bottom: 6px; /* Giảm margin */
+        font-size: 1.1em; /* Tăng kích thước font */
+        margin-bottom: 10px; /* Tăng margin */
         flex-shrink: 0;
     }
 
     .item-options-list {
-        gap: 4px; /* Giảm gap để có thể hiển thị 3 lựa chọn trên 1 hàng */
-        margin-bottom: 12px; /* Giảm margin */
+        gap: 8px; /* Tăng gap cho dễ nhấn */
+        margin-bottom: 20px; /* Tăng margin */
         flex-wrap: wrap;
         flex-shrink: 0;
     }
 
     .item-option-btn {
-        padding: 6px 8px; /* Giảm padding */
-        font-size: 0.8em; /* Giảm từ 0.9em xuống 0.8em */
-        border-radius: 6px; /* Giảm border-radius */
-        min-width: 60px; /* Đảm bảo kích thước tối thiểu */
+        padding: 10px 15px; /* Tăng padding cho dễ nhấn */
+        font-size: 0.9em; /* Tăng kích thước font */
+        border-radius: 8px; /* Tăng border-radius */
+        min-width: 80px; /* Tăng kích thước tối thiểu */
         text-align: center;
         flex: 1; /* Cho phép các button chia đều không gian */
-        max-width: calc(33.33% - 3px); /* Đảm bảo 3 button trên 1 hàng */
+        max-width: calc(50% - 4px); /* 2 button trên 1 hàng */
+    }
+
+    /* Khi có nhiều options (6 options), hiển thị mỗi option trên 1 dòng */
+    .item-options-list.many-options {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .item-options-list.many-options .item-option-btn {
+        max-width: 100%;
+        width: 100%;
+        flex: none;
     }
 
     .item-detail-add-btn {
-        padding: 10px; /* Giảm padding */
-        font-size: 0.9em; /* Giảm từ 1em xuống 0.9em */
+        padding: 15px; /* Tăng padding */
+        font-size: 1.1em; /* Tăng kích thước font */
         margin-top: auto; /* Luôn đẩy xuống bottom */
         flex-shrink: 0;
     }
@@ -1132,32 +1147,32 @@ header {
         }
         
         .item-detail-image {
-            width: 35%; /* Giảm thêm một chút */
-            /* Loại bỏ min-height để ảnh tự động điều chỉnh */
+            width: 100%; /* Ảnh vẫn chiếm toàn bộ chiều rộng */
+            height: 180px; /* Giảm chiều cao ảnh một chút */
             background-size: cover;
             background-position: center;
         }
         
         .item-detail-info {
-            width: 65%;
-            padding: 12px;
-            height: 100%;
+            width: 100%;
+            padding: 15px;
+            height: auto;
         }
         
         .item-detail-name {
-            font-size: 1.2em;
+            font-size: 1.4em; /* Giữ kích thước font vừa phải */
             flex-shrink: 0;
         }
         
         .item-option-btn {
-            padding: 5px 6px;
-            font-size: 0.75em;
-            min-width: 50px;
+            padding: 8px 12px; /* Giữ padding vừa phải */
+            font-size: 0.85em;
+            min-width: 70px;
         }
         
         .item-detail-add-btn {
-            padding: 8px;
-            font-size: 0.85em;
+            padding: 12px;
+            font-size: 1em;
             margin-top: auto;
             flex-shrink: 0;
         }
@@ -1385,32 +1400,32 @@ header {
 /* Responsive cho màn hình rất nhỏ */
 @media (max-width: 480px) {
     .item-detail-image {
-        width: 35%; /* Giảm thêm một chút */
-        /* Loại bỏ min-height để ảnh tự động điều chỉnh */
+        width: 100%; /* Ảnh vẫn chiếm toàn bộ chiều rộng */
+        height: 180px; /* Giảm chiều cao ảnh một chút */
         background-size: cover;
         background-position: center;
     }
     
     .item-detail-info {
-        width: 65%;
-        padding: 12px;
-        height: 100%;
+        width: 100%;
+        padding: 15px;
+        height: auto;
     }
     
     .item-detail-name {
-        font-size: 1.2em;
+        font-size: 1.4em; /* Giữ kích thước font vừa phải */
     }
     
     .item-option-btn {
-        padding: 5px 6px;
-        font-size: 0.75em;
-        min-width: 50px;
+        padding: 8px 12px; /* Giữ padding vừa phải */
+        font-size: 0.85em;
+        min-width: 70px;
     }
     
     /* Responsive cho giá trong modal chi tiết trên màn hình nhỏ */
     .item-detail-info .item-detail-unit-price {
-        font-size: 1em !important; /* Giảm thêm từ 1.2em xuống 1em */
-        margin-top: 8px !important; /* Giảm thêm margin top */
+        font-size: 1.1em !important; /* Tăng kích thước font */
+        margin-top: 10px !important; /* Tăng margin top */
     }
 }
 
@@ -1568,8 +1583,9 @@ header {
     border-radius: 12px;
     margin-bottom: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.18);
-    max-width: 300px;
-    min-width: 250px;
+    max-width: 350px;
+    min-width: 280px;
+    width: auto; /* Để toast thông thường tự động điều chỉnh chiều rộng */
     word-wrap: break-word;
     font-size: 14px;
     line-height: 1.4;
@@ -1582,6 +1598,7 @@ header {
     cursor: pointer;
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.08);
+    user-select: none; /* Ngăn chọn text khi click */
 }
 
 .toast-message.show {
@@ -1621,6 +1638,395 @@ header {
 
 .toast-message-text {
     flex: 1;
+}
+
+/* Toast với hình ảnh và nút thêm vào giỏ hàng */
+.toast-message.with-image {
+    padding: 16px;
+    max-width: 400px;
+    min-width: 320px;
+}
+
+.toast-image-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.toast-item-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #f0f0f0;
+    flex-shrink: 0;
+}
+
+.toast-item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.toast-item-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.toast-item-name {
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 4px;
+    line-height: 1.3;
+}
+
+.toast-item-price {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.toast-add-button {
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 8px;
+    width: 100%;
+}
+
+.toast-add-button:hover {
+    background: #218838;
+    transform: translateY(-1px);
+}
+
+/* Toast bread item card - giống menu card */
+.toast-message.bread-item-toast {
+    width: 30%;
+    max-width: 30%;
+    min-width: 200px;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+/* Toast dish recommendations - hiển thị 2 món thành 1 hàng */
+.toast-message.dish-recommendations-toast {
+    width: 90%;
+    max-width: 600px;
+    min-width: 300px;
+    padding: 16px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.toast-dish-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.toast-dish-card {
+    background: #fafafa;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #e0e0e0;
+    transition: transform 0.2s ease;
+}
+
+.toast-dish-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.toast-dish-image {
+    width: 100%;
+    height: 80px;
+    background: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.toast-dish-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.toast-dish-content {
+    padding: 8px;
+}
+
+.toast-dish-title {
+    font-weight: bold;
+    font-size: 0.9em;
+    margin-bottom: 4px;
+    line-height: 1.2;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+}
+
+.toast-dish-price {
+    color: #c62828;
+    font-weight: bold;
+    font-size: 0.85em;
+    margin-bottom: 6px;
+}
+
+.toast-dish-unit {
+    color: #666;
+    font-size: 0.8em;
+    margin-bottom: 6px;
+    font-style: italic;
+}
+
+.toast-dish-add-btn {
+    background-color: #524fe0;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    width: 100%;
+    height: 28px;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.toast-dish-add-btn:hover {
+    background-color: #4a47c7;
+    transform: scale(1.05);
+}
+
+.toast-dish-add-btn:disabled {
+    background-color: #28a745;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.toast-bread-card {
+    display: flex;
+    flex-direction: column;
+    background: #fafafa;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.toast-bread-image {
+    width: 100%;
+    height: 120px;
+    background: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.toast-bread-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.toast-bread-image .no-image {
+    color: #aaa;
+    font-size: 0.8em;
+}
+
+.toast-bread-content {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    position: relative;
+}
+
+.toast-bread-title {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 0;
+    line-height: 1.2;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+}
+
+.toast-bread-price {
+    color: #c62828;
+    font-weight: bold;
+    font-size: 1.15em;
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum";
+    margin-bottom: 0;
+}
+
+.toast-bread-unit {
+    color: #888;
+    font-size: 0.9em;
+    margin-bottom: 0;
+    display: none; /* Ẩn hiển thị PCS */
+}
+
+.toast-bread-add-btn {
+    background-color: #524fe0;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    width: 100%;
+    height: 36px;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 6px;
+}
+
+.toast-bread-add-btn:hover {
+    background-color: #4a47c7;
+    transform: scale(1.05);
+}
+
+/* Chat bread item card - giống toast nhưng trong chat */
+.chat-bread-card {
+    display: flex;
+    flex-direction: column;
+    background: #fafafa;
+    border-radius: 12px;
+    overflow: hidden;
+    max-width: 250px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chat-bread-image {
+    width: 100%;
+    height: 120px;
+    background: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.chat-bread-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.chat-bread-image .no-image {
+    color: #aaa;
+    font-size: 0.8em;
+}
+
+.chat-bread-content {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    position: relative;
+}
+
+.chat-bread-title {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 0;
+    line-height: 1.2;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+}
+
+.chat-bread-price {
+    color: #c62828;
+    font-weight: bold;
+    font-size: 1.1em;
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum";
+    margin-bottom: 0;
+}
+
+.chat-bread-unit {
+    color: #888;
+    font-size: 0.9em;
+    margin-bottom: 0;
+    display: none; /* Ẩn hiển thị PCS */
+}
+
+.chat-bread-add-btn {
+    background-color: #524fe0;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    width: 100%;
+    height: 36px;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 6px;
+}
+
+.chat-bread-add-btn:hover {
+    background-color: #4a47c7;
+    transform: scale(1.05);
+}
+
+.chat-bread-add-btn:disabled {
+    background-color: #28a745;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.toast-close-button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    transition: all 0.3s ease;
+}
+
+.toast-close-button:hover {
+    background: rgba(255, 255, 255, 0.3);
 }
 
 .toast-message-time {
@@ -1674,6 +2080,52 @@ header {
         border-radius: 10px;
         box-sizing: border-box;
     }
+    .toast-message.with-image {
+        width: 80%;
+        max-width: 350px;
+        min-width: 280px;
+        padding: 12px;
+    }
+    .toast-message.bread-item-toast {
+        width: 30%;
+        max-width: 30%;
+        min-width: 200px;
+        padding: 10px;
+    }
+    .toast-image-container {
+        gap: 8px;
+        margin-bottom: 8px;
+    }
+    .toast-item-image {
+        width: 50px;
+        height: 50px;
+    }
+    .toast-item-name {
+        font-size: 14px;
+    }
+    .toast-item-price {
+        font-size: 13px;
+    }
+    .toast-add-button {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+    .toast-bread-image {
+        height: 100px;
+    }
+    .toast-bread-content {
+        padding: 10px;
+    }
+    .toast-bread-title {
+        font-size: 1.1em;
+    }
+    .toast-bread-price {
+        font-size: 1.1em;
+    }
+    .toast-bread-add-btn {
+        height: 32px;
+        font-size: 18px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1692,6 +2144,13 @@ header {
         font-size: 12px;
         margin-bottom: 6px;
         box-sizing: border-box;
+    }
+    
+    .toast-message.bread-item-toast {
+        width: 30%;
+        max-width: 30%;
+        min-width: 200px;
+        padding: 10px;
     }
 }
 
@@ -1870,3 +2329,142 @@ body.chat-just-closed {
 body.chat-just-closed * {
     pointer-events: none !important;
 }
+
+/* Chat dish recommendations grid - hiển thị 2 món thành 1 hàng */
+.chat-dish-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-top: 12px;
+    max-width: 400px;
+}
+
+.chat-dish-card {
+    background: #fafafa;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #e0e0e0;
+    transition: transform 0.2s ease;
+}
+
+.chat-dish-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.chat-dish-image {
+    width: 100%;
+    height: 80px;
+    background: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.chat-dish-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.chat-dish-content {
+    padding: 8px;
+}
+
+.chat-dish-title {
+    font-weight: bold;
+    font-size: 0.9em;
+    margin-bottom: 4px;
+    line-height: 1.2;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+}
+
+.chat-dish-price {
+    color: #c62828;
+    font-weight: bold;
+    font-size: 0.85em;
+    margin-bottom: 6px;
+}
+
+.chat-dish-unit {
+    color: #666;
+    font-size: 0.8em;
+    margin-bottom: 6px;
+    font-style: italic;
+}
+
+.chat-dish-add-btn {
+    background-color: #524fe0;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    width: 100%;
+    height: 28px;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.chat-dish-add-btn:hover {
+    background-color: #4a47c7;
+    transform: scale(1.05);
+}
+
+.chat-dish-add-btn:disabled {
+    background-color: #28a745;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Party size toast styles */
+.toast-message.party-size-toast {
+    width: 90%;
+    max-width: 500px;
+    min-width: 350px;
+    padding: 16px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.toast-party-size-options {
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+    flex-wrap: wrap;
+}
+
+.toast-party-size-btn {
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 15px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    flex: 1;
+    min-width: 80px;
+}
+
+.toast-party-size-btn:hover {
+    background: #667eea;
+    color: white;
+    border-color: #667eea;
+}
+
+.toast-party-size-btn:disabled {
+    background: #6c757d;
+    color: #fff;
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+

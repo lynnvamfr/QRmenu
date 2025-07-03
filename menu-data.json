@@ -251,7 +251,36 @@
     {
       "category": "hotpot",
       "items": [
-        { "id": "fish_hotpot", "price": 150000, "unit": "1 pcs", "priceType": "from", "image": "images/hotpot.jpg" }
+        {
+          "id": "fish_hotpot",
+          "priceType": "options",
+          "unit": "1 pcs",
+          "image": "images/hotpot.jpg",
+          "options": [
+            { "id": "fish_hotpot_ca_mu", "price": 200000, "fish_type": "ca_mu" },
+            { "id": "fish_hotpot_ca_duoi", "price": 200000, "fish_type": "ca_duoi" },
+            { "id": "fish_hotpot_ca_chim", "price": 150000, "fish_type": "ca_chim" },
+            { "id": "fish_hotpot_ca_cu", "price": 250000, "fish_type": "ca_cu" },
+            { "id": "fish_hotpot_ca_mam_thau", "price": 150000, "fish_type": "ca_mam_thau" },
+            { "id": "fish_hotpot_ca_bop", "price": 170000, "fish_type": "ca_bop" }
+          ]
+        },
+        {
+          "id": "fish_hotpot_ca_do",
+          "image": "images/hotpot.jpg",
+          "priceType": "per_kg",
+          "pricePerKg": 400000,
+          "minWeightGram": 400,
+          "options": [{ "weightGram": 400 }, { "weightGram": 500 }, { "weightGram": 600 }]
+        },
+        {
+          "id": "fish_hotpot_ca_dia",
+          "image": "images/hotpot.jpg",
+          "priceType": "per_kg",
+          "pricePerKg": 450000,
+          "minWeightGram": 500,
+          "options": [{ "weightGram": 500 }, { "weightGram": 600 }, { "weightGram": 700 }]
+        }
       ]
     },
     {

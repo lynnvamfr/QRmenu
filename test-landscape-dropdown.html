@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Landscape Dropdown - Fish Hotpot</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+        .test-info {
+            background: #f0f8ff;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border-left: 4px solid #007bff;
+        }
+        .test-info h2 {
+            margin-top: 0;
+            color: #007bff;
+        }
+        .test-info ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        .test-info li {
+            margin: 5px 0;
+        }
+        .test-button {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        .test-button:hover {
+            background: #218838;
+        }
+        .orientation-info {
+            background: #fff3cd;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+            border-left: 4px solid #ffc107;
+        }
+        .current-orientation {
+            font-weight: bold;
+            color: #856404;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-info">
+        <h2>🧪 Test Landscape Dropdown Feature</h2>
+        <p><strong>Mục đích:</strong> Kiểm tra tính năng chuyển đổi từ buttons sang dropdown khi điện thoại nằm ngang và có nhiều hơn 3 options.</p>
+        
+        <h3>📋 Hướng dẫn test:</h3>
+        <ul>
+            <li><strong>Món test:</strong> Fish Hotpot (có 6 options)</li>
+            <li><strong>Desktop/Portrait:</strong> Hiển thị buttons (3 buttons/hàng)</li>
+            <li><strong>Landscape (≤1024px):</strong> Chuyển sang dropdown khi có >3 options</li>
+            <li><strong>Landscape (≤1024px):</strong> Vẫn hiển thị buttons khi có ≤3 options</li>
+        </ul>
+        
+        <h3>🔧 Cách test:</h3>
+        <ul>
+            <li>Mở Developer Tools (F12)</li>
+            <li>Chuyển sang chế độ mobile</li>
+            <li>Xoay màn hình sang landscape</li>
+            <li>Click vào món "Fish Hotpot"</li>
+            <li>Kiểm tra xem có hiển thị dropdown thay vì buttons không</li>
+        </ul>
+    </div>
+
+    <div class="orientation-info">
+        <p><strong>Trạng thái hiện tại:</strong></p>
+        <p class="current-orientation" id="orientation-status">Đang kiểm tra...</p>
+        <p><strong>Kích thước màn hình:</strong> <span id="screen-size">Đang kiểm tra...</span></p>
+        <p><strong>Số options:</strong> <span id="options-count">6 (Fish Hotpot)</span></p>
+        <p><strong>Kết quả dự kiến:</strong> <span id="expected-result">Đang kiểm tra...</span></p>
+    </div>
+
+    <button class="test-button" onclick="openFishHotpotModal()">🍲 Mở Fish Hotpot Modal</button>
+    <button class="test-button" onclick="checkOrientation()">🔄 Kiểm tra Orientation</button>
+    <button class="test-button" onclick="toggleOrientation()">📱 Chuyển đổi Orientation</button>
+
+    <!-- Modal Chi tiết Món ăn -->
+    <div id="item-detail-modal" class="item-detail-modal">
+        <div class="item-detail-content">
+            <button class="item-detail-close" id="item-detail-close">&times;</button>
+            <div class="item-detail-body" id="item-detail-body">
+                <!-- Nội dung sẽ được tạo bởi JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Dữ liệu món Fish Hotpot để test
+        const fishHotpotItem = {
+            "id": "fish_hotpot",
+            "image": "images/hotpot.jpg",
+            "priceType": "options",
+            "unit": "1 pcs",
+            "canBeSpicy": true,
+            "options": [
+                { "id": "fish_hotpot_ca_chim", "price": 150000, "size": "Cá Chim" },
+                { "id": "fish_hotpot_ca_mam_thau", "price": 150000, "size": "Cá Mâm Thâu" },
+                { "id": "fish_hotpot_ca_bop", "price": 170000, "size": "Cá Bớp" },
+                { "id": "fish_hotpot_ca_mu", "price": 200000, "size": "Cá Mú" },
+                { "id": "fish_hotpot_ca_duoi", "price": 200000, "size": "Cá Đuối" },
+                { "id": "fish_hotpot_ca_cu", "price": 250000, "size": "Cá Cu" }
+            ]
+        };
+
+        // Mock translations
+        const translations = {
+            'add_to_cart': 'Thêm vào giỏ',
+            'spicy_options.title': 'Độ cay:',
+            'spicy_options.not_spicy': 'Không cay',
+            'spicy_options.mild_spicy': 'Cay nhẹ',
+            'spicy_options.normal_spicy': 'Cay vừa'
+        };
+
+        function getTranslation(key) {
+            return translations[key] || key;
+        }
+
+        function getItemTranslationById(id) {
+            // Mock translations cho fish hotpot
+            const fishTranslations = {
+                'fish_hotpot_ca_chim': 'Cá Chim',
+                'fish_hotpot_ca_mam_thau': 'Cá Mâm Thâu',
+                'fish_hotpot_ca_bop': 'Cá Bớp',
+                'fish_hotpot_ca_mu': 'Cá Mú',
+                'fish_hotpot_ca_duoi': 'Cá Đuối',
+                'fish_hotpot_ca_cu': 'Cá Cu'
+            };
+            return fishTranslations[id] || id;
+        }
+
+        function formatDisplayPrice(price) {
+            return price.toLocaleString('vi-VN');
+        }
+
+        function openFishHotpotModal() {
+            const itemDetailModal = document.getElementById('item-detail-modal');
+            const itemDetailBody = document.getElementById('item-detail-body');
+            const itemDetailClose = document.getElementById('item-detail-close');
+
+            itemDetailBody.innerHTML = '';
+            
+            // Tạo image div
+            const imageDiv = document.createElement('div');
+            imageDiv.className = 'item-detail-image';
+            imageDiv.style.backgroundImage = `url('${fishHotpotItem.image}')`;
+            
+            // Tạo info div
+            const infoDiv = document.createElement('div');
+            infoDiv.className = 'item-detail-info';
+            
+            // Tên món
+            const nameH2 = document.createElement('h2');
+            nameH2.className = 'item-detail-name';
+            nameH2.textContent = 'Lẩu Cá';
+            infoDiv.appendChild(nameH2);
+
+            // Xử lý options
+            const optionsCount = fishHotpotItem.options.length;
+            const shouldUseDropdown = optionsCount > 3;
+            
+            // Tạo options list (buttons)
+            const optionsList = document.createElement('div');
+            optionsList.className = 'item-options-list';
+            
+            // Tạo dropdown
+            const optionsDropdown = document.createElement('select');
+            optionsDropdown.className = 'item-options-dropdown';
+            
+            // Thêm class dựa trên số lượng options
+            if (shouldUseDropdown) {
+                optionsList.classList.add('many-options');
+                optionsDropdown.classList.add('many-options');
+            } else {
+                optionsList.classList.add('few-options');
+                optionsDropdown.classList.add('few-options');
+            }
+            
+            // Tạo buttons
+            fishHotpotItem.options.forEach((opt, index) => {
+                const optionBtn = document.createElement('button');
+                optionBtn.className = 'item-option-btn';
+                if (index === 0) optionBtn.classList.add('active');
+                optionBtn.dataset.optionId = opt.id;
+                optionBtn.dataset.price = opt.price;
+                optionBtn.dataset.size = opt.size;
+                const displayName = getItemTranslationById(opt.id) || opt.size;
+                optionBtn.textContent = `${displayName} - ${formatDisplayPrice(opt.price)}đ`;
+                optionsList.appendChild(optionBtn);
+            });
+            
+            // Tạo options cho dropdown
+            fishHotpotItem.options.forEach((opt, index) => {
+                const option = document.createElement('option');
+                option.value = index;
+                option.dataset.optionId = opt.id;
+                option.dataset.price = opt.price;
+                option.dataset.size = opt.size;
+                const displayName = getItemTranslationById(opt.id) || opt.size;
+                option.textContent = `${displayName} - ${formatDisplayPrice(opt.price)}đ`;
+                optionsDropdown.appendChild(option);
+            });
+            
+            // Thêm vào DOM
+            infoDiv.appendChild(optionsList);
+            infoDiv.appendChild(optionsDropdown);
+            
+            // Nút thêm vào giỏ
+            const addBtn = document.createElement('button');
+            addBtn.className = 'item-detail-add-btn';
+            let selectedOption = fishHotpotItem.options[0];
+            
+            const updatePrice = () => {
+                addBtn.textContent = `${getTranslation('add_to_cart')} - ${formatDisplayPrice(selectedOption.price)}đ`;
+            };
+            
+            // Xử lý sự kiện cho buttons
+            optionsList.querySelectorAll('.item-option-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    optionsList.querySelector('.item-option-btn.active')?.classList.remove('active');
+                    btn.classList.add('active');
+                    selectedOption = {
+                        id: btn.dataset.optionId,
+                        price: Number(btn.dataset.price),
+                        size: btn.dataset.size
+                    };
+                    updatePrice();
+                });
+            });
+            
+            // Xử lý sự kiện cho dropdown
+            optionsDropdown.addEventListener('change', () => {
+                const selectedIndex = optionsDropdown.value;
+                const selectedOpt = fishHotpotItem.options[selectedIndex];
+                selectedOption = {
+                    id: selectedOpt.id,
+                    price: selectedOpt.price,
+                    size: selectedOpt.size
+                };
+                updatePrice();
+            });
+            
+            // Thêm spacer và nút
+            const spacerDiv = document.createElement('div');
+            spacerDiv.style.flex = '1';
+            spacerDiv.style.minHeight = '20px';
+            infoDiv.appendChild(spacerDiv);
+            infoDiv.appendChild(addBtn);
+            
+            // Thêm vào body
+            itemDetailBody.appendChild(imageDiv);
+            itemDetailBody.appendChild(infoDiv);
+            
+            // Hiển thị modal
+            itemDetailModal.style.display = 'flex';
+            
+            // Xử lý đóng modal
+            itemDetailClose.addEventListener('click', () => {
+                itemDetailModal.style.display = 'none';
+            });
+            
+            // Đóng modal khi click bên ngoài
+            itemDetailModal.addEventListener('click', (e) => {
+                if (e.target === itemDetailModal) {
+                    itemDetailModal.style.display = 'none';
+                }
+            });
+            
+            updatePrice();
+        }
+
+        function checkOrientation() {
+            const orientation = window.screen.orientation.type;
+            const width = window.innerWidth;
+            const height = window.innerHeight;
+            const isLandscape = orientation.includes('landscape') || width > height;
+            const isMobile = width <= 1024;
+            
+            document.getElementById('orientation-status').textContent = 
+                `${orientation} (${isLandscape ? 'Landscape' : 'Portrait'})`;
+            
+            document.getElementById('screen-size').textContent = 
+                `${width}px × ${height}px`;
+            
+            let expectedResult = '';
+            if (isLandscape && isMobile) {
+                expectedResult = 'Dropdown (vì có 6 options > 3)';
+            } else {
+                expectedResult = 'Buttons (3 buttons/hàng)';
+            }
+            
+            document.getElementById('expected-result').textContent = expectedResult;
+        }
+
+        function toggleOrientation() {
+            // Chỉ hoạt động trong Developer Tools
+            if (window.innerWidth <= 1024) {
+                alert('Vui lòng sử dụng Developer Tools để test orientation!');
+                return;
+            }
+            
+            // Toggle giữa portrait và landscape
+            const currentWidth = window.innerWidth;
+            const currentHeight = window.innerHeight;
+            
+            if (currentWidth > currentHeight) {
+                // Đang landscape, chuyển sang portrait
+                window.resizeTo(currentHeight, currentWidth);
+            } else {
+                // Đang portrait, chuyển sang landscape
+                window.resizeTo(currentHeight, currentWidth);
+            }
+            
+            setTimeout(checkOrientation, 100);
+        }
+
+        // Kiểm tra orientation khi load trang
+        document.addEventListener('DOMContentLoaded', () => {
+            checkOrientation();
+            
+            // Kiểm tra khi resize
+            window.addEventListener('resize', checkOrientation);
+            
+            // Kiểm tra khi orientation change
+            window.addEventListener('orientationchange', () => {
+                setTimeout(checkOrientation, 100);
+            });
+        });
+    </script>
+</body>
+</html> 

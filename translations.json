@@ -44,6 +44,15 @@
     "ja": "カートに追加",
     "ru": "Добавить в корзину"
   },
+  "add_to_cart_short": {
+    "en": "Add",
+    "vi": "Thêm",
+    "th": "เพิ่ม",
+    "zh": "添加",
+    "ko": "추가",
+    "ja": "追加",
+    "ru": "Добавить"
+  },
   "remove": {
     "en": "Remove",
     "vi": "Xóa",
@@ -254,7 +263,7 @@
     },
     "crabs": {
       "en": "Crabs",
-      "vi": "Cua",
+      "vi": "Ghẹ",
       "th": "ปู",
       "zh": "螃蟹",
       "ko": "게",
@@ -263,7 +272,7 @@
     },
     "sea_crab": {
       "en": "Sea Crab",
-      "vi": "Cua biển",
+      "vi": "Ghẹ biển",
       "th": "ปูทะเล",
       "zh": "海蟹",
       "ko": "바다게",
@@ -976,7 +985,7 @@
     },
     "steamed_sea_crab": {
       "en": "Steamed sea crab",
-      "vi": "Cua Hấp",
+      "vi": "Ghẹ Hấp",
       "th": "ปูทะเลนึ่ง",
       "zh": "蒸海蟹",
       "ko": "바다게 찜",
@@ -985,7 +994,7 @@
     },
     "sea_crab_tamarind_sauce": {
       "en": "Sea crab with tamarind sauce",
-      "vi": "Cua Sốt Me",
+      "vi": "Ghẹ Sốt Me",
       "th": "ปูทะเลซอสมะขาม",
       "zh": "罗望子酱海蟹",
       "ko": "타마린드소스 바다게",
@@ -994,7 +1003,7 @@
     },
     "roasted_sea_crab_fish_sauce": {
       "en": "Roasted sea crab with fish sauce",
-      "vi": "Cua Rang Mắm",
+      "vi": "Ghẹ Rang Mắm",
       "th": "ปูทะเลคั่วน้ำปลา",
       "zh": "鱼露烤海蟹",
       "ko": "피쉬소스 바다게 구이",
@@ -1046,6 +1055,78 @@
       "ja": "魚の鍋",
       "ru": "Рыбный хотпот"
     },
+    "fish_hotpot_ca_mu": {
+      "en": "Grouper",
+      "vi": "Cá Mú",
+      "th": "ปลากะรัง",
+      "zh": "石斑鱼",
+      "ko": "농어",
+      "ja": "ハタ",
+      "ru": "Морской окунь"
+    },
+    "fish_hotpot_ca_duoi": {
+      "en": "Stingray",
+      "vi": "Cá Đuối",
+      "th": "ปลากระเบน",
+      "zh": "魟鱼",
+      "ko": "가오리",
+      "ja": "エイ",
+      "ru": "Скат"
+    },
+    "fish_hotpot_ca_chim": {
+      "en": "Pomfret",
+      "vi": "Cá Chim",
+      "th": "ปลาแป้น",
+      "zh": "鲳鱼",
+      "ko": "병어",
+      "ja": "マナガツオ",
+      "ru": "Помфрет"
+    },
+    "fish_hotpot_ca_cu": {
+      "en": "Red Snapper",
+      "vi": "Cá Cu",
+      "th": "ปลาแดง",
+      "zh": "红鲷鱼",
+      "ko": "붉은 도미",
+      "ja": "フエダイ",
+      "ru": "Красный люциан"
+    },
+    "fish_hotpot_ca_mam_thau": {
+      "en": "Threadfin",
+      "vi": "Cá Mâm Thâu",
+      "th": "ปลาแป้น",
+      "zh": "马鲅鱼",
+      "ko": "실고기",
+      "ja": "イトヨリ",
+      "ru": "Нитопер"
+    },
+    "fish_hotpot_ca_bop": {
+      "en": "Grouper",
+      "vi": "Cá Bớp",
+      "th": "ปลากะรัง",
+      "zh": "石斑鱼",
+      "ko": "농어",
+      "ja": "ハタ",
+      "ru": "Морской окунь"
+    },
+    "fish_hotpot_ca_do": {
+      "en": "Fish hotpot - Red fish",
+      "vi": "Lẩu Cá Dò",
+      "th": "หม้อไฟปลาแดง",
+      "zh": "鱼火锅 - 红鱼",
+      "ko": "생선 샤브샤브 - 붉은 생선",
+      "ja": "魚の鍋 - 赤い魚",
+      "ru": "Рыбный хотпот - Красная рыба"
+    },
+    "fish_hotpot_ca_dia": {
+      "en": "Fish hotpot - Flat fish",
+      "vi": "Lẩu Cá Dìa",
+      "th": "หม้อไฟปลาแบน",
+      "zh": "鱼火锅 - 比目鱼",
+      "ko": "생선 샤브샤브 - 넙치",
+      "ja": "魚の鍋 - ヒラメ",
+      "ru": "Рыбный хотпот - Камбала"
+    },
     "cold_napkin": {
       "en": "Cold napkin",
       "vi": "Khăn Lạnh",
@@ -1083,15 +1164,96 @@
     "ja": "こんにちは！どのようにお手伝いできますか？メニューについて質問したり、注文したり、私たちのレストランについて学んだりできます。",
     "ru": "Привет! Как я могу вам помочь? Вы можете спросить о нашем меню, сделать заказ или узнать о нашем ресторане."
   },
-  "seafood_weight_notice": {
-    "en": "Note: Seafood items sold by weight will be weighed at actual weight when payment is made. The displayed price is estimated!",
-    "vi": "Lưu ý: Các món hải sản theo kg sẽ được cân thực tế khi thanh toán. Giá hiển thị là tạm tính!",
-    "th": "หมายเหตุ: อาหารทะเลที่ขายตามน้ำหนักจะถูกชั่งน้ำหนักจริงเมื่อชำระเงิน ราคาที่แสดงเป็นเพียงการประมาณการ!",
-    "zh": "注意：按重量销售的海鲜在付款时将按实际重量称重。显示的价格是估算的！",
-    "ko": "참고: 무게로 판매되는 해산물은 결제 시 실제 무게로 측정됩니다. 표시된 가격은 추정치입니다!",
-    "ja": "注意：重量で販売されるシーフードは、支払い時に実際の重量で計量されます。表示価格は推定です！",
-    "ru": "Примечание: Морепродукты, продаваемые по весу, будут взвешены по фактическому весу при оплате. Отображаемая цена является оценочной!"
-  },
+      "seafood_weight_notice": {
+      "en": "Note: Seafood items sold by weight will be weighed at actual weight when payment is made. The displayed price is estimated!",
+      "vi": "Lưu ý: Các món hải sản theo kg sẽ được cân thực tế khi thanh toán. Giá hiển thị là tạm tính!",
+      "th": "หมายเหตุ: อาหารทะเลที่ขายตามน้ำหนักจะถูกชั่งน้ำหนักจริงเมื่อชำระเงิน ราคาที่แสดงเป็นเพียงการประมาณการ!",
+      "zh": "注意：按重量销售的海鲜在付款时将按实际重量称重。显示的价格是估算的！",
+      "ko": "참고: 무게로 판매되는 해산물은 결제 시 실제 무게로 측정됩니다. 표시된 가격은 추정치입니다!",
+      "ja": "注意：重量で販売されるシーフードは、支払い時に実際の重量で計量されます。表示価格は推定です！",
+      "ru": "Примечание: Морепродукты, продаваемые по весу, будут взвешены по фактическому весу при оплате. Отображаемая цена является оценочной!"
+    },
+    "bread_suggestion": {
+      "en": "🍞 Would you like to add bread to go with your {item_name}? It's perfect for dipping in the sauce! Click here to add bread.",
+      "vi": "🍞 Bạn có muốn thêm bánh mì để ăn kèm với {item_name} không? Bánh mì rất thích hợp để chấm sốt! Nhấn vào đây để thêm bánh mì.",
+      "th": "🍞 คุณต้องการเพิ่มขนมปังเพื่อทานคู่กับ {item_name} ไหม? เหมาะสำหรับจิ้มซอส! คลิกที่นี่เพื่อเพิ่มขนมปัง",
+      "zh": "🍞 您想要为您的{item_name}添加面包吗？非常适合蘸酱！点击此处添加面包。",
+      "ko": "🍞 {item_name}와 함께 빵을 추가하시겠습니까? 소스에 찍어 먹기에 완벽합니다! 여기를 클릭하여 빵을 추가하세요.",
+      "ja": "🍞 {item_name}と一緒にパンを追加しますか？ソースにつけて食べるのに最適です！ここをクリックしてパンを追加してください。",
+      "ru": "🍞 Хотите добавить хлеб к вашему {item_name}? Он идеально подходит для макания в соус! Нажмите здесь, чтобы добавить хлеб."
+    },
+    "bread_added_message": {
+      "en": "✅ Bread has been added to your cart! It's perfect for dipping in the sauce.",
+      "vi": "✅ Đã thêm bánh mì vào giỏ hàng! Bánh mì rất thích hợp để chấm sốt.",
+      "th": "✅ เพิ่มขนมปังลงตะกร้าแล้ว! เหมาะสำหรับจิ้มซอส",
+      "zh": "✅ 面包已添加到您的购物车！非常适合蘸酱。",
+      "ko": "✅ 빵이 장바구니에 추가되었습니다! 소스에 찍어 먹기에 완벽합니다.",
+      "ja": "✅ パンがカートに追加されました！ソースにつけて食べるのに最適です。",
+      "ru": "✅ Хлеб добавлен в корзину! Он идеально подходит для макания в соус."
+    },
+    "bread_added_confirmation": {
+      "en": "🍞 Bread added! Perfect for dipping in the sauce.",
+      "vi": "🍞 Đã thêm bánh mì! Hoàn hảo để chấm sốt.",
+      "th": "🍞 เพิ่มขนมปังแล้ว! เหมาะสำหรับจิ้มซอส",
+      "zh": "🍞 已添加面包！非常适合蘸酱。",
+      "ko": "🍞 빵 추가됨! 소스에 찍어 먹기에 완벽합니다.",
+      "ja": "🍞 パン追加！ソースにつけて食べるのに最適です。",
+      "ru": "🍞 Хлеб добавлен! Идеально для макания в соус."
+    },
+    "ask_party_size": {
+      "en": "👥 How many people are you dining with today? This will help us recommend the perfect dishes for your group.",
+      "vi": "👥 Hôm nay quý khách đi bao nhiêu người? Điều này sẽ giúp chúng tôi tư vấn món ăn phù hợp cho nhóm của bạn.",
+      "th": "👥 วันนี้คุณมากับกี่คน? สิ่งนี้จะช่วยให้เราแนะนำอาหารที่สมบูรณ์แบบสำหรับกลุ่มของคุณ",
+      "zh": "👥 今天您和多少人一起用餐？这将帮助我们为您的团队推荐完美的菜肴。",
+      "ko": "👥 오늘 몇 명이 함께 식사하시나요? 이를 통해 그룹에 맞는 완벽한 요리를 추천해드릴 수 있습니다.",
+      "ja": "👥 今日は何名様でご来店ですか？これにより、お客様のグループに最適な料理をご提案できます。",
+      "ru": "👥 Сколько человек сегодня обедает? Это поможет нам порекомендовать идеальные блюда для вашей группы."
+    },
+    "party_size_1_3": {
+      "en": "1-3 people",
+      "vi": "1-3 người",
+      "th": "1-3 คน",
+      "zh": "1-3人",
+      "ko": "1-3명",
+      "ja": "1-3名",
+      "ru": "1-3 человека"
+    },
+    "party_size_4_7": {
+      "en": "4-7 people",
+      "vi": "4-7 người",
+      "th": "4-7 คน",
+      "zh": "4-7人",
+      "ko": "4-7명",
+      "ja": "4-7名",
+      "ru": "4-7 человек"
+    },
+    "party_size_8_plus": {
+      "en": "8+ people",
+      "vi": "8+ người",
+      "th": "8+ คน",
+      "zh": "8+人",
+      "ko": "8+명",
+      "ja": "8+名",
+      "ru": "8+ человек"
+    },
+    "large_party_optimization": {
+      "en": "🍽️ For groups of 4+ people, we recommend ordering multiple dishes of the same type to optimize kitchen preparation time and ensure all dishes are served together.",
+      "vi": "🍽️ Đối với nhóm từ 4 người trở lên, chúng tôi khuyên quý khách nên đặt thêm các món cùng loại để tối ưu thời gian chuẩn bị và đảm bảo tất cả món được phục vụ cùng lúc.",
+      "th": "🍽️ สำหรับกลุ่ม 4+ คน เราขอแนะนำให้สั่งอาหารหลายจานประเภทเดียวกันเพื่อเพิ่มประสิทธิภาพเวลาเตรียมอาหารในครัวและให้แน่ใจว่าอาหารทุกจานจะเสิร์ฟพร้อมกัน",
+      "zh": "🍽️ 对于4人以上的团体，我们建议订购同类型的多道菜，以优化厨房准备时间并确保所有菜肴一起供应。",
+      "ko": "🍽️ 4명 이상의 그룹의 경우, 주방 준비 시간을 최적화하고 모든 요리가 함께 제공되도록 같은 유형의 여러 요리를 주문하는 것을 권장합니다.",
+      "ja": "🍽️ 4名以上のグループの場合、キッチンの準備時間を最適化し、すべての料理が一緒に提供されるように、同じタイプの複数の料理を注文することをお勧めします。",
+      "ru": "🍽️ Для групп от 4+ человек мы рекомендуем заказывать несколько блюд одного типа, чтобы оптимизировать время подготовки на кухне и обеспечить подачу всех блюд вместе."
+    },
+    "dish_recommendations": {
+      "en": "🍽️ Here are our recommended dishes for your group:",
+      "vi": "🍽️ Đây là những món ăn chúng tôi đề xuất cho nhóm của bạn:",
+      "th": "🍽️ นี่คืออาหารที่เราแนะนำสำหรับกลุ่มของคุณ:",
+      "zh": "🍽️ 以下是我们为您的团队推荐的菜肴：",
+      "ko": "🍽️ 그룹을 위한 추천 요리입니다:",
+      "ja": "🍽️ お客様のグループにおすすめの料理です：",
+      "ru": "🍽️ Вот наши рекомендуемые блюда для вашей группы:"
+    },
   "bot_responses": {
     "greetings": {
       "en": "Hello! How can I help you?",
@@ -1149,7 +1311,7 @@
     },
     "seafood_info": {
       "en": "We specialize in fresh seafood! Lobster, crab, fish, squid and more.",
-      "vi": "Chúng tôi chuyên về hải sản tươi ngon! Có tôm hùm, cua, cá, mực và nhiều món khác.",
+      "vi": "Chúng tôi chuyên về hải sản tươi ngon! Có tôm hùm, ghẹ, cá, mực và nhiều món khác.",
       "th": "เราเชี่ยวชาญด้านอาหารทะเลสดใหม่! กุ้งมังกร ปู ปลา ปลาหมึก และอื่นๆ อีกมากมาย",
       "zh": "我们专门经营新鲜海鲜！龙虾、螃蟹、鱼、鱿鱼等等。",
       "ko": "신선한 해산물 전문입니다! 랍스터, 게, 생선, 오징어 등이 있습니다.",
