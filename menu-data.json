@@ -29,7 +29,7 @@
       "category": "salad",
       "items": [
         { "id": "fish_salad", "price": 90000, "unit": "1 pcs", "image": "images/goicalac.jpg" },
-        { "id": "melo_melo_sea_snail_salad", "price": 120000, "unit": "1 pcs" },
+        { "id": "melo_melo_sea_snail_salad", "price": 120000, "unit": "1 pcs", "image": "images/oc_giac_tron.jpg" },
         { "id": "jellyfish_salad", "price": 80000, "unit": "1 pcs", "image": "images/goi_sua.jpg" },
         { "id": "beef_salad", "price": 100000, "unit": "1 pcs", "image": "images/goibobop.jpg" },
         { "id": "seafood_salad", "price": 100000, "unit": "1 pcs", "image": "images/goimucchuacay.jpg" },
@@ -66,12 +66,12 @@
         { "id": "steamed_so_duong", "price": 150000, "unit": "500 gr" },
         { "id": "grilled_so_duong", "price": 150000, "unit": "500 gr", "image": "images/soduongnuong.jpg" },
         { "id": "steamed_so_bum", "price": 100000, "unit": "500 gr" },
-        { "id": "grilled_so_bum", "price": 110000, "unit": "500 gr" },
+        { "id": "grilled_so_bum", "price": 110000, "unit": "500 gr", "image": "images/so_bum_nuong.jpg" },
         { "id": "steamed_so_mia", "price": 110000, "unit": "500 gr", "image": "images/somiahap.jpg" },
         { "id": "grilled_so_mia", "price": 130000, "unit": "500 gr" },
         { "id": "grilled_mussels", "price": 160000, "unit": "1000 gr", "image": "images/vemnuong.jpg" },
         { "id": "steamed_chips", "price": 100000, "unit": "350 gr", "image": "images/chiphap.jpg" },
-        { "id": "steamed_cockles", "price": 125000, "unit": "500 gr", "priceType": "from" },
+        { "id": "steamed_cockles", "price": 125000, "unit": "500 gr", "priceType": "from", "image": "images/so_huyet_hap.jpg" },
         { "id": "self_baked_humor", "price": 250000, "unit": "500 gr", "image": "images/tuhainuong.jpg" },
         {
           "id": "grilled_coi_may",
@@ -89,8 +89,8 @@
     {
       "category": "type_of_snails",
       "items": [
-        { "id": "steamed_sweet_snails", "price": 300000, "unit": "500 gr" },
-        { "id": "garlic_butter_sweet_snails", "price": 325000, "unit": "500 gr" },
+        { "id": "steamed_sweet_snails", "price": 300000, "unit": "500 gr", "image": "images/oc_huong_hap.jpg" },
+        { "id": "garlic_butter_sweet_snails", "price": 325000, "unit": "500 gr", "image": "images/oc_huong_bo_toi.jpg" },
         { "id": "steamed_spiny_sea_snails", "price": 130000, "unit": "500 gr" },
         { "id": "sauteed_chili_spiny_sea_snails", "price": 150000, "unit": "500 gr", "image": "images/OcGaiXaoSaOt.jpg" },
         { "id": "mud_creeper_sea_snails_coconut_sauce", "price": 80000, "unit": "1 pcs", "image": "images/oclenxaodua.jpg" }
@@ -111,7 +111,7 @@
         },
         {
           "id": "grilled_needle_squid",
-          "image": "images/muc-ong-nuong.jpg",
+          "image": "images/muc_ong_nuong.jpg",
           "priceType": "per_kg",
           "pricePerKg": 500000,
           "minWeightGram": 500,
@@ -119,7 +119,7 @@
         },
         {
           "id": "steamed_broad_squid",
-          "image": "images/muc-la-hap.jpg",
+          "image": "images/muc_la_hap.jpg",
           "priceType": "per_kg",
           "pricePerKg": 550000,
           "minWeightGram": 500,
@@ -141,7 +141,7 @@
       "items": [
         {
           "id": "tri_hang_special_lobster",
-          "image": "images/tom-hum-sot-tri-hang.jpg",
+          "image": "images/tom_hum_sot_tri_hang.jpg",
           "priceType": "per_kg",
           "pricePerKg": 1600000,
           "minWeightGram": 700,
@@ -149,7 +149,7 @@
         },
         {
           "id": "grilled_lobster_cheese",
-          "image": "images/tom-hum-nuong-phomai.jpg",
+          "image": "images/tom_hum_nuong_pho_mai.jpg",
           "priceType": "per_kg",
           "pricePerKg": 1600000,
           "minWeightGram": 700,
@@ -194,7 +194,7 @@
     {
       "category": "tiger_shrimp",
       "items": [
-        { "id": "grilled_tiger_shrimp", "price": 325000, "unit": "500 gr" },
+        { "id": "grilled_tiger_shrimp", "price": 325000, "unit": "500 gr", "image": "images/tom_su_nuong.jpg" },
         { "id": "steamed_tiger_shrimp", "price": 325000, "unit": "500 gr", "image": "images/tom_su_hap.jpg" },
         { "id": "sashimi_tiger_shrimp", "price": 350000, "unit": "500 gr" },
         { "id": "garlic_butter_tiger_shrimp", "price": 350000, "unit": "500 gr", "image": "images/tom_su_bo_toi.jpg" },
@@ -251,6 +251,7 @@
         },
         {
           "id": "sea_crab_tamarind_sauce",
+          "image": "images/cua_sot_me.jpg",
           "priceType": "per_kg",
           "pricePerKg": 800000,
           "minWeightGram": 500,
