@@ -808,8 +808,9 @@ header {
 
 .cart-item-controls {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 15px;
+    gap: 8px;
     flex-shrink: 0;
 }
 
@@ -844,6 +845,24 @@ header {
 
 .remove-btn:hover {
     background-color: #c62828;
+}
+
+.quote-btn {
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 10px;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    min-width: 80px;
+}
+
+.quote-btn:hover {
+    background: #218838;
 }
 
 .cart-total {
@@ -2466,5 +2485,223 @@ body.chat-just-closed * {
     color: #fff;
     cursor: not-allowed;
     opacity: 0.5;
+}
+
+/* Price Quote Modal */
+.price-quote-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 10001;
+}
+
+.price-quote-content {
+    background: white;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.price-quote-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.price-quote-header h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.price-quote-close {
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #666;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.price-quote-close:hover {
+    color: #333;
+}
+
+.price-quote-body {
+    padding: 20px;
+}
+
+.gram-input-section {
+    margin-bottom: 20px;
+}
+
+#gramInput {
+    width: 90%;
+    padding: 15px;
+    font-size: 24px;
+    text-align: center;
+    border: 2px solid #007bff;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    background: #f8f9fa;
+}
+
+.number-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.number-btn {
+    padding: 20px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    background: #fff;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    transition: all 0.2s;
+}
+
+.number-btn:hover {
+    border-color: #007bff;
+    background: #e7f1ff;
+}
+
+
+
+.action-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.quote-btn, .update-btn {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.quote-btn {
+    background: #28a745;
+    color: white;
+}
+
+.quote-btn:hover {
+    background: #218838;
+}
+
+.update-btn {
+    background: #007bff;
+    color: white;
+}
+
+.update-btn:hover {
+    background: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .price-quote-content {
+        width: 95%;
+        max-height: 90vh;
+    }
+    
+    .number-grid {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 8px;
+    }
+    
+    .number-btn {
+        padding: 15px;
+        font-size: 18px;
+    }
+    
+    #gramInput {
+        font-size: 20px;
+        padding: 12px;
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+    }
+}
+
+/* Quote Result Display */
+.quote-result {
+    margin-top: 20px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    border: 2px solid #007bff;
+}
+
+.quote-result-content {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.quote-price-display {
+    font-weight: bold;
+    font-size: 50px;
+    color: #007bff;
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+.price-per-kg {
+    font-size: 55px;
+    color: #666;
+    font-style: italic;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.ok-result-btn {
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s;
+    width: 100%;
+}
+
+.ok-result-btn:hover {
+    background: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .quote-result-content .quote-price-display {
+        font-size: 28px;
+    }
+    
+    .quote-result-content .price-per-kg {
+        font-size: 32px;
+    }
 }
 
