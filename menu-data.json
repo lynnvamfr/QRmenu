@@ -30,7 +30,7 @@
       "items": [
         { "id": "fish_salad", "price": 90000, "unit": "1 pcs", "image": "images/goicalac.jpg" },
         { "id": "melo_melo_sea_snail_salad", "price": 120000, "unit": "1 pcs" },
-        { "id": "jellyfish_salad", "price": 80000, "unit": "1 pcs" },
+        { "id": "jellyfish_salad", "price": 80000, "unit": "1 pcs", "image": "images/goi_sua.jpg" },
         { "id": "beef_salad", "price": 100000, "unit": "1 pcs", "image": "images/goibobop.jpg" },
         { "id": "seafood_salad", "price": 100000, "unit": "1 pcs", "image": "images/goimucchuacay.jpg" },
         { "id": "chicken_wing_stir_fried_fish_sauce", "price": 80000, "image": "images/canhgachienmam.jpg" }
@@ -61,7 +61,7 @@
         { "id": "grilled_oysters_onion", "price": 90000, "unit": "5 pcs", "image": "images/HauNuongMoHanh.jpg" },
         { "id": "cheese_baked_oysters", "price": 90000, "unit": "5 pcs" },
         { "id": "sashimi_oyster", "price": 100000, "unit": "5 pcs", "image": "images/hausashimi.jpg" },
-        { "id": "steamed_clams", "price": 120000, "unit": "500 gr" },
+        { "id": "steamed_clams", "price": 120000, "unit": "500 gr", "image": "images/ngheu_hap.jpg" },
         { "id": "grilled_clams", "price": 130000, "unit": "500 gr" },
         { "id": "steamed_so_duong", "price": 150000, "unit": "500 gr" },
         { "id": "grilled_so_duong", "price": 150000, "unit": "500 gr", "image": "images/soduongnuong.jpg" },
@@ -127,12 +127,13 @@
         },
         {
           "id": "grilled_broad_squid",
-          "image": "images/muc-la-nuong.jpg",
+          "image": "images/muc_la_nuong.jpg",
           "priceType": "per_kg",
           "pricePerKg": 550000,
           "minWeightGram": 500,
           "options": [{ "weightGram": 500 }, { "weightGram": 600 }, { "weightGram": 700 }]
-        }
+        },
+        { "id": "squid_wrapped_morning_glory", "price": 170000, "unit": "1 pcs", "image": "images/muc_cuon_rau_muong.jpg" }
       ]
     },
     {
@@ -204,18 +205,65 @@
     {
       "category": "crabs",
       "items": [
-        { "id": "steamed_blue_crab", "price": 300000, "unit": "500 gr", "image": "images/ghe_hap.jpg" },
-        { "id": "blue_crab_tamarind_sauce", "price": 325000, "unit": "500 gr" },
-        { "id": "tri_hang_special_sauce_crab", "price": 325000, "unit": "500 gr", "image": "images/ghetrihang.jpg" },
-        { "id": "blue_crab_garlic_butter_sauce", "price": 325000, "unit": "500 gr", "image": "images/blue_crab_bo_toi.jpg" }
+        {
+          "id": "steamed_blue_crab",
+          "image": "images/ghe_hap.jpg",
+          "priceType": "per_kg",
+          "pricePerKg": 600000,
+          "minWeightGram": 500,
+          "options": [{ "weightGram": 500 }, { "weightGram": 600 }, { "weightGram": 700 }]
+        },
+        {
+          "id": "blue_crab_tamarind_sauce",
+          "priceType": "per_kg",
+          "pricePerKg": 650000,
+          "minWeightGram": 500,
+          "options": [{ "weightGram": 500 }, { "weightGram": 600 }, { "weightGram": 700 }]
+        },
+        {
+          "id": "tri_hang_special_sauce_crab",
+          "image": "images/ghetrihang.jpg",
+          "priceType": "per_kg",
+          "pricePerKg": 650000,
+          "minWeightGram": 500,
+          "options": [{ "weightGram": 500 }, { "weightGram": 600 }, { "weightGram": 700 }]
+        },
+        {
+          "id": "blue_crab_garlic_butter_sauce",
+          "image": "images/blue_crab_bo_toi.jpg",
+          "priceType": "per_kg",
+          "pricePerKg": 650000,
+          "minWeightGram": 500,
+          "options": [{ "weightGram": 500 }, { "weightGram": 600 }, { "weightGram": 700 }]
+        }
       ]
     },
     {
       "category": "sea_crab",
       "items": [
-        { "id": "steamed_sea_crab", "price": 375000, "unit": "500 gr", "image": "images/steamed_sea_crab.jpg" },
-        { "id": "sea_crab_tamarind_sauce", "price": 400000, "unit": "500 gr" },
-        { "id": "roasted_sea_crab_fish_sauce", "price": 400000, "unit": "500 gr", "image": "images/sea_crab_rang_mam.jpg" }
+        {
+          "id": "steamed_sea_crab",
+          "image": "images/steamed_sea_crab.jpg",
+          "priceType": "per_kg",
+          "pricePerKg": 750000,
+          "minWeightGram": 500,
+          "options": [{ "weightGram": 500 }, { "weightGram": 600 }, { "weightGram": 700 }]
+        },
+        {
+          "id": "sea_crab_tamarind_sauce",
+          "priceType": "per_kg",
+          "pricePerKg": 800000,
+          "minWeightGram": 500,
+          "options": [{ "weightGram": 500 }, { "weightGram": 600 }, { "weightGram": 700 }]
+        },
+        {
+          "id": "roasted_sea_crab_fish_sauce",
+          "image": "images/sea_crab_rang_mam.jpg",
+          "priceType": "per_kg",
+          "pricePerKg": 800000,
+          "minWeightGram": 500,
+          "options": [{ "weightGram": 500 }, { "weightGram": 600 }, { "weightGram": 700 }]
+        }
       ]
     },
     {
