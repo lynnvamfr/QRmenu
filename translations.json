@@ -1291,13 +1291,13 @@
       "ru": "8+ человек"
     },
     "large_party_optimization": {
-      "en": "🍽️ For groups of 4+ people, we recommend ordering multiple dishes of the same type to optimize kitchen preparation time and ensure all dishes are served together.",
-      "vi": "🍽️ Đối với nhóm từ 4 người trở lên, chúng tôi khuyên quý khách nên đặt thêm các món cùng loại để tối ưu thời gian chuẩn bị và đảm bảo tất cả món được phục vụ cùng lúc.",
-      "th": "🍽️ สำหรับกลุ่ม 4+ คน เราขอแนะนำให้สั่งอาหารหลายจานประเภทเดียวกันเพื่อเพิ่มประสิทธิภาพเวลาเตรียมอาหารในครัวและให้แน่ใจว่าอาหารทุกจานจะเสิร์ฟพร้อมกัน",
-      "zh": "🍽️ 对于4人以上的团体，我们建议订购同类型的多道菜，以优化厨房准备时间并确保所有菜肴一起供应。",
-      "ko": "🍽️ 4명 이상의 그룹의 경우, 주방 준비 시간을 최적화하고 모든 요리가 함께 제공되도록 같은 유형의 여러 요리를 주문하는 것을 권장합니다.",
-      "ja": "🍽️ 4名以上のグループの場合、キッチンの準備時間を最適化し、すべての料理が一緒に提供されるように、同じタイプの複数の料理を注文することをお勧めします。",
-      "ru": "🍽️ Для групп от 4+ человек мы рекомендуем заказывать несколько блюд одного типа, чтобы оптимизировать время подготовки на кухне и обеспечить подачу всех блюд вместе."
+      "en": "🍽️ For groups of 4+ people, ordering multiple separate dishes may lead to extended waiting times, as each dish requires different preparation processes. During peak hours, the kitchen prioritizes processing dishes of the same type to ensure faster service speed. For a more seamless dining experience, you may consider choosing additional dishes of the same type.",
+      "vi": "🍽️ Đối với nhóm từ 4 khách trở lên, việc chọn nhiều món riêng biệt có thể dẫn đến thời gian chờ món kéo dài, do mỗi món cần quy trình chế biến khác nhau. Vào các khung giờ cao điểm, bếp sẽ ưu tiên xử lý nhanh các món trùng loại nhằm đảm bảo tốc độ phục vụ. Để trải nghiệm dùng bữa liền mạch hơn, quý khách có thể cân nhắc lựa chọn thêm các món cùng loại.",
+      "th": "🍽️ สำหรับกลุ่ม 4+ คน การสั่งอาหารหลายจานแยกกันอาจนำไปสู่เวลารอที่ยาวนาน เนื่องจากอาหารแต่ละจานต้องการกระบวนการเตรียมที่แตกต่างกัน ในช่วงเวลาที่มีผู้คนมาก ครัวจะให้ความสำคัญกับการประมวลผลอาหารประเภทเดียวกันเพื่อให้แน่ใจว่าความเร็วในการให้บริการเร็วขึ้น เพื่อประสบการณ์การรับประทานอาหารที่ราบรื่นมากขึ้น คุณอาจพิจารณาเลือกอาหารเพิ่มเติมประเภทเดียวกัน",
+      "zh": "🍽️ 对于4人以上的团体，订购多个单独的菜肴可能会导致等待时间延长，因为每道菜都需要不同的准备过程。在高峰时段，厨房会优先处理同类型的菜肴，以确保更快的服务速度。为了获得更流畅的用餐体验，您可以考虑选择同类型的额外菜肴。",
+      "ko": "🍽️ 4명 이상의 그룹의 경우, 여러 개의 개별 요리를 주문하면 각 요리가 다른 준비 과정이 필요하기 때문에 대기 시간이 길어질 수 있습니다. 피크 시간대에는 주방이 더 빠른 서비스 속도를 보장하기 위해 같은 유형의 요리를 우선적으로 처리합니다. 더 원활한 식사 경험을 위해 같은 유형의 추가 요리를 선택하는 것을 고려해보실 수 있습니다.",
+      "ja": "🍽️ 4名以上のグループの場合、複数の個別料理を注文すると、各料理が異なる準備プロセスを必要とするため、待ち時間が長くなる可能性があります。ピーク時間帯には、キッチンはより速いサービス速度を確保するために、同じタイプの料理を優先的に処理します。よりスムーズな食事体験のために、同じタイプの追加料理を選択することをご検討ください。",
+      "ru": "🍽️ Для групп от 4+ человек заказ нескольких отдельных блюд может привести к длительному времени ожидания, поскольку каждое блюдо требует различных процессов приготовления. В часы пик кухня отдает приоритет обработке блюд одного типа для обеспечения более быстрого обслуживания. Для более плавного опыта приема пищи вы можете рассмотреть возможность выбора дополнительных блюд того же типа."
     },
     "dish_recommendations": {
       "en": "🍽️ Here are our recommended dishes for your group:",
