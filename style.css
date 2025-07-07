@@ -151,7 +151,7 @@ header {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
     position: absolute;
-    z-index: 10000;
+    z-index: 999;
 }
 
 .chat-button:hover {
@@ -175,7 +175,7 @@ header {
     justify-content: center;
     transition: all 0.3s ease;
     position: absolute;
-    z-index: 10001;
+    z-index: 1000;
     opacity: 0;
     pointer-events: none;
 }
@@ -220,7 +220,7 @@ header {
     display: none;
     flex-direction: column;
     overflow: hidden;
-    z-index: 10001;
+    z-index: 1000;
     transform: none;
     transition: top 0.3s ease, bottom 0.3s ease, height 0.3s ease;
 }
@@ -679,7 +679,7 @@ header {
     height: 100%;
     background-color: rgba(0,0,0,0.5);
     display: none;
-    z-index: 1002;
+    z-index: 10001;
     justify-content: center;
     align-items: center;
 }
@@ -814,6 +814,16 @@ header {
     flex-shrink: 0;
 }
 
+/* Controls cho món thường (có +/- quantity) */
+.cart-item-controls.quantity-controls {
+    flex-direction: row;
+}
+
+/* Controls cho món theo gram (có Quote/Remove) */
+.cart-item-controls.action-controls {
+    flex-direction: column;
+}
+
 .quantity-btn {
     background-color: #f0f0f0;
     border: none;
@@ -829,6 +839,13 @@ header {
 
 .quantity-btn:hover {
     background-color: #e0e0e0;
+}
+
+.quantity-display {
+    font-weight: bold;
+    font-size: 16px;
+    min-width: 20px;
+    text-align: center;
 }
 
 .remove-btn {
@@ -2595,7 +2612,7 @@ body.chat-just-closed * {
 
 .quote-btn, .update-btn {
     flex: 1;
-    padding: 15px;
+    padding: 5px;
     border: none;
     border-radius: 10px;
     font-size: 18px;
@@ -2702,6 +2719,83 @@ body.chat-just-closed * {
     
     .quote-result-content .price-per-kg {
         font-size: 32px;
+    }
+}
+
+/* Spicy Options */
+.spicy-options {
+    margin-top: 10px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: nowrap;
+    min-height: 40px;
+}
+
+.spicy-label {
+    font-size: 12px;
+    font-weight: bold;
+    color: #666;
+    margin-bottom: 0;
+    margin-right: 8px;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.spicy-btn {
+    background: #fff;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 6px 10px;
+    font-size: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+    min-width: 60px;
+    flex-shrink: 0;
+    height: 28px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.spicy-btn:hover {
+    border-color: #ff6b35;
+    background: #fff5f2;
+}
+
+.spicy-btn.active {
+    background: #ff6b35;
+    color: white;
+    border-color: #ff6b35;
+}
+
+.spicy-btn.active:hover {
+    background: #e55a2b;
+}
+
+@media (max-width: 768px) {
+    .spicy-options {
+        margin-top: 12px;
+        padding: 8px;
+        gap: 6px;
+        min-height: 36px;
+    }
+    .spicy-label {
+        font-size: 11px;
+        margin-right: 6px;
+    }
+    .spicy-btn {
+        padding: 4px 8px;
+        font-size: 9px;
+        min-width: 50px;
+        height: 24px;
+        line-height: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
 

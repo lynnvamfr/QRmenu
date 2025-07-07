@@ -33,7 +33,7 @@
         { "id": "jellyfish_salad", "price": 80000, "unit": "1 pcs", "image": "images/goi_sua.jpg" },
         { "id": "beef_salad", "price": 100000, "unit": "1 pcs", "image": "images/goibobop.jpg" },
         { "id": "seafood_salad", "price": 100000, "unit": "1 pcs", "image": "images/goimucchuacay.jpg" },
-        { "id": "chicken_wing_stir_fried_fish_sauce", "price": 80000, "image": "images/canhgachienmam.jpg" }
+        { "id": "chicken_wing_stir_fried_fish_sauce", "price": 80000, "image": "images/canhgachienmam.jpg", "canBeSpicy": true }
       ]
     },
     {
@@ -41,7 +41,7 @@
       "items": [
         { "id": "seafood_fried_rice", "price": 90000, "unit": "1 pcs", "image": "images/com_chien_hai_san.jpg" },
         { "id": "egg_fried_rice", "price": 60000, "unit": "1 pcs", "image": "images/comchientrung.jpg" },
-        { "id": "seafood_stir_fried_noodles", "price": 100000, "unit": "1 pcs", "image": "images/mixaohaisan.jpg" },
+        { "id": "seafood_stir_fried_noodles", "price": 100000, "unit": "1 pcs", "image": "images/mixaohaisan.jpg", "canBeSpicy": true },
         { "id": "beef_stir_fried_noodles", "price": 100000, "unit": "1 pcs" },
         { "id": "porridge", "price": 100000, "unit": "1 pcs", "priceType": "from", "image": "images/chao.jpg" }
       ]
@@ -145,6 +145,7 @@
           "priceType": "per_kg",
           "pricePerKg": 1600000,
           "minWeightGram": 700,
+          "canBeSpicy": true,
           "options": [{ "weightGram": 700 }, { "weightGram": 800 }, { "weightGram": 900 }]
         },
         {
@@ -187,7 +188,7 @@
         { "id": "steamed_mantis_shrimp", "price": 275000, "unit": "500 gr", "image": "images/tom_tit_hap.jpg" },
         { "id": "mantis_shrimp_garlic_butter_sauce", "price": 300000, "unit": "500 gr", "image": "images/tom_tit_bo_toi.jpg" },
         { "id": "mantis_shrimp_tamarind_sauce", "price": 300000, "unit": "500 gr" },
-        { "id": "tri_hang_special_mantis_shrimp", "price": 300000, "unit": "500 gr" },
+        { "id": "tri_hang_special_mantis_shrimp", "price": 300000, "unit": "500 gr", "canBeSpicy": true },
         { "id": "mantis_shrimp_roasted_fish_sauce", "price": 300000, "unit": "500 gr" }
       ]
     },
@@ -199,7 +200,7 @@
         { "id": "sashimi_tiger_shrimp", "price": 350000, "unit": "500 gr" },
         { "id": "garlic_butter_tiger_shrimp", "price": 350000, "unit": "500 gr", "image": "images/tom_su_bo_toi.jpg" },
         { "id": "tiger_shrimp_tamarind_sauce", "price": 350000, "unit": "500 gr" },
-        { "id": "tri_hang_special_tiger_shrimp", "price": 350000, "unit": "500 gr", "image": "images/tomsutrihang.jpg" }
+        { "id": "tri_hang_special_tiger_shrimp", "price": 350000, "unit": "500 gr", "image": "images/tomsutrihang.jpg", "canBeSpicy": true }
       ]
     },
     {
@@ -226,6 +227,7 @@
           "priceType": "per_kg",
           "pricePerKg": 650000,
           "minWeightGram": 500,
+          "canBeSpicy": true,
           "options": [{ "weightGram": 500 }, { "weightGram": 600 }, { "weightGram": 700 }]
         },
         {
@@ -305,6 +307,7 @@
           "priceType": "options",
           "unit": "1 pcs",
           "image": "images/hotpot.jpg",
+          "canBeSpicy": true,
           "options": [
             { "id": "fish_hotpot_ca_mu", "price": 200000, "fish_type": "ca_mu" },
             { "id": "fish_hotpot_ca_duoi", "price": 200000, "fish_type": "ca_duoi" },
@@ -320,6 +323,7 @@
           "priceType": "per_kg",
           "pricePerKg": 400000,
           "minWeightGram": 400,
+          "canBeSpicy": true,
           "options": [{ "weightGram": 400 }, { "weightGram": 500 }, { "weightGram": 600 }]
         },
         {
@@ -328,6 +332,7 @@
           "priceType": "per_kg",
           "pricePerKg": 450000,
           "minWeightGram": 500,
+          "canBeSpicy": true,
           "options": [{ "weightGram": 500 }, { "weightGram": 600 }, { "weightGram": 700 }]
         }
       ]
