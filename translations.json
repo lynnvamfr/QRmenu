@@ -1308,16 +1308,34 @@
       "ja": "🍽️ お客様のグループにおすすめの料理です：",
       "ru": "🍽️ Вот наши рекомендуемые блюда для вашей группы:"
     },
-  "bot_responses": {
-    "greetings": {
-      "en": "Hello! How can I help you?",
-      "vi": "Xin chào! Tôi có thể giúp gì cho bạn?",
-      "th": "สวัสดี! ฉันสามารถช่วยคุณได้อย่างไร?",
-      "zh": "您好！我能为您做些什么？",
-      "ko": "안녕하세요! 어떻게 도와드릴까요?",
-      "ja": "こんにちは！どのようにお手伝いできますか？",
-      "ru": "Привет! Как я могу вам помочь?"
+      "hours_info": {
+      "en": "What are your opening hours?",
+      "vi": "Giờ mở cửa của bạn là gì?",
+      "th": "เวลาทำการของคุณคืออะไร?",
+      "zh": "你们的营业时间是什么？",
+      "ko": "영업시간은 언제인가요?",
+      "ja": "営業時間は何時ですか？",
+      "ru": "Какие у вас часы работы?"
     },
+    "hours_response": {
+      "en": "We are open from 9:00 AM to 10:30 PM, 7 days a week.",
+      "vi": "Chúng tôi mở cửa từ 9 giờ sáng đến 10 giờ 30 tối, 7 ngày/tuần.",
+      "th": "เราเปิดทำการตั้งแต่ 9:00 น. ถึง 22:30 น. 7 วันต่อสัปดาห์",
+      "zh": "我们每天上午9:00至晚上10:30营业，每周7天。",
+      "ko": "매일 오전 9시부터 오후 10시 30분까지 영업합니다.",
+      "ja": "毎日午前9時から午後10時30分まで営業しています。",
+      "ru": "Мы работаем с 9:00 до 22:30, 7 дней в неделю."
+    },
+    "bot_responses": {
+      "greetings": {
+        "en": "Hello! How can I help you?",
+        "vi": "Xin chào! Tôi có thể giúp gì cho bạn?",
+        "th": "สวัสดี! ฉันสามารถช่วยคุณได้อย่างไร?",
+        "zh": "您好！我能为您做些什么？",
+        "ko": "안녕하세요! 어떻게 도와드릴까요?",
+        "ja": "こんにちは！どのようにお手伝いできますか？",
+        "ru": "Привет! Как я могу вам помочь?"
+      },
     "menu_info": {
       "en": "We have many delicious fresh seafood dishes! You can view our menu above. Is there anything you're interested in?",
       "vi": "Chúng tôi có nhiều món hải sản tươi ngon! Bạn có thể xem menu ở trên. Có món nào bạn quan tâm không?",
