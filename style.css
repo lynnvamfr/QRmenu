@@ -2875,3 +2875,268 @@ body.chat-just-closed * {
     }
 }
 
+/* Party size warning modal - thay thế toast */
+.party-warning-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.85);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 20000; /* Cao hơn tất cả */
+    backdrop-filter: blur(5px);
+}
+
+.party-warning-content {
+    background: white;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 500px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    animation: modalSlideIn 0.4s ease-out;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.party-warning-header {
+    background: linear-gradient(135deg, #ff6b35, #ff8c42);
+    color: white;
+    padding: 25px 30px;
+    border-radius: 20px 20px 0 0;
+    text-align: center;
+    position: relative;
+}
+
+.party-warning-header::before {
+    content: "⚠️ LƯU Ý QUAN TRỌNG";
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ff4757;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(255, 71, 87, 0.3);
+    animation: warningPulse 2s infinite;
+}
+
+@keyframes warningPulse {
+    0%, 100% { transform: translateX(-50%) scale(1); }
+    50% { transform: translateX(-50%) scale(1.05); }
+}
+
+.party-warning-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+    margin-top: 10px;
+}
+
+.party-warning-subtitle {
+    font-size: 14px;
+    opacity: 0.9;
+    margin-top: 5px;
+}
+
+.party-warning-body {
+    padding: 30px;
+    text-align: center;
+}
+
+.party-warning-message {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.party-warning-icon {
+    font-size: 48px;
+    margin-bottom: 20px;
+    animation: iconBounce 1s ease-in-out;
+}
+
+@keyframes iconBounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+    60% { transform: translateY(-5px); }
+}
+
+.party-warning-options {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.party-warning-btn {
+    background: #667eea;
+    color: white;
+    border: 2px solid #667eea;
+    border-radius: 15px;
+    padding: 15px 40px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 150px;
+    position: relative;
+    overflow: hidden;
+}
+
+.party-warning-btn:hover {
+    background: #5a6fd8;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+}
+
+.party-warning-btn:disabled {
+    background: #6c757d;
+    color: #fff;
+    cursor: not-allowed;
+    opacity: 0.5;
+    transform: none;
+    box-shadow: none;
+    transition: all 0.3s ease;
+}
+
+.party-warning-btn:disabled:hover {
+    background: #6c757d;
+    color: #fff;
+    cursor: not-allowed;
+    opacity: 0.5;
+    transform: none;
+    box-shadow: none;
+}
+
+.party-warning-btn.selected {
+    background: #28a745;
+    color: white;
+    border-color: #28a745;
+    box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+}
+
+/* Responsive */
+
+/* Responsive */
+@media (max-width: 768px) {
+    .party-warning-content {
+        width: 95%;
+        max-height: 85vh;
+    }
+    
+    .party-warning-header {
+        padding: 20px 25px;
+    }
+    
+    .party-warning-title {
+        font-size: 20px;
+    }
+    
+    .party-warning-body {
+        padding: 25px 20px;
+    }
+    
+    .party-warning-message {
+        font-size: 15px;
+    }
+    
+    .party-warning-options {
+        gap: 10px;
+    }
+    
+    .party-warning-btn {
+        padding: 12px 20px;
+        font-size: 14px;
+        min-width: 100px;
+    }
+}
+
+/* Khóa tương tác với body */
+body.party-warning-locked {
+    overflow: hidden;
+    pointer-events: none;
+}
+
+body.party-warning-locked .party-warning-modal {
+    pointer-events: auto;
+}
+
+/* Toast hỏi số người - không biến mất cho đến khi chọn */
+.toast-message.party-size-question {
+    width: 90%;
+    max-width: 500px;
+    min-width: 350px;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+}
+
+.toast-party-size-question-options {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.toast-party-size-question-btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: white;
+    min-width: 100px;
+    backdrop-filter: blur(10px);
+}
+
+.toast-party-size-question-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-2px);
+}
+
+.toast-party-size-question-btn:disabled {
+    background: rgba(255, 255, 255, 0.1);
+    cursor: not-allowed;
+    opacity: 0.5;
+    transform: none;
+}
+
+/* Ẩn progress bar cho toast hỏi số người */
+.toast-message.party-size-question .toast-progress {
+    display: none;
+}
+
+/* Ẩn close button cho toast hỏi số người */
+.toast-message.party-size-question .toast-close-button {
+    display: none;
+}
+

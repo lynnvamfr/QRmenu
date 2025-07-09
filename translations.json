@@ -1105,7 +1105,7 @@
       "vi": "Lẩu Cá",
       "th": "หม้อไฟปลา",
       "zh": "鱼火锅",
-      "ko": "생선 샤브샤브",
+      "ko": "샤브샤브",
       "ja": "魚の鍋",
       "ru": "Рыбный хотпот"
     },
@@ -1291,13 +1291,13 @@
       "ru": "8+ человек"
     },
     "large_party_optimization": {
-      "en": "🍽️ For groups of 4+ people, ordering multiple separate dishes may lead to extended waiting times, as each dish requires different preparation processes. During peak hours, the kitchen prioritizes processing dishes of the same type to ensure faster service speed. For a more seamless dining experience, you may consider choosing additional dishes of the same type.",
-      "vi": "🍽️ Đối với nhóm từ 4 khách trở lên, việc chọn nhiều món riêng biệt có thể dẫn đến thời gian chờ món kéo dài, do mỗi món cần quy trình chế biến khác nhau. Vào các khung giờ cao điểm, bếp sẽ ưu tiên xử lý nhanh các món trùng loại nhằm đảm bảo tốc độ phục vụ. Để trải nghiệm dùng bữa liền mạch hơn, quý khách có thể cân nhắc lựa chọn thêm các món cùng loại.",
-      "th": "🍽️ สำหรับกลุ่ม 4+ คน การสั่งอาหารหลายจานแยกกันอาจนำไปสู่เวลารอที่ยาวนาน เนื่องจากอาหารแต่ละจานต้องการกระบวนการเตรียมที่แตกต่างกัน ในช่วงเวลาที่มีผู้คนมาก ครัวจะให้ความสำคัญกับการประมวลผลอาหารประเภทเดียวกันเพื่อให้แน่ใจว่าความเร็วในการให้บริการเร็วขึ้น เพื่อประสบการณ์การรับประทานอาหารที่ราบรื่นมากขึ้น คุณอาจพิจารณาเลือกอาหารเพิ่มเติมประเภทเดียวกัน",
-      "zh": "🍽️ 对于4人以上的团体，订购多个单独的菜肴可能会导致等待时间延长，因为每道菜都需要不同的准备过程。在高峰时段，厨房会优先处理同类型的菜肴，以确保更快的服务速度。为了获得更流畅的用餐体验，您可以考虑选择同类型的额外菜肴。",
-      "ko": "🍽️ 4명 이상의 그룹의 경우, 여러 개의 개별 요리를 주문하면 각 요리가 다른 준비 과정이 필요하기 때문에 대기 시간이 길어질 수 있습니다. 피크 시간대에는 주방이 더 빠른 서비스 속도를 보장하기 위해 같은 유형의 요리를 우선적으로 처리합니다. 더 원활한 식사 경험을 위해 같은 유형의 추가 요리를 선택하는 것을 고려해보실 수 있습니다.",
-      "ja": "🍽️ 4名以上のグループの場合、複数の個別料理を注文すると、各料理が異なる準備プロセスを必要とするため、待ち時間が長くなる可能性があります。ピーク時間帯には、キッチンはより速いサービス速度を確保するために、同じタイプの料理を優先的に処理します。よりスムーズな食事体験のために、同じタイプの追加料理を選択することをご検討ください。",
-      "ru": "🍽️ Для групп от 4+ человек заказ нескольких отдельных блюд может привести к длительному времени ожидания, поскольку каждое блюдо требует различных процессов приготовления. В часы пик кухня отдает приоритет обработке блюд одного типа для обеспечения более быстрого обслуживания. Для более плавного опыта приема пищи вы можете рассмотреть возможность выбора дополнительных блюд того же типа."
+      "en": "🍽️ <strong>IMPORTANT WARNING:</strong><br><br>For groups of 4+ people, ordering multiple separate dishes can result in extended wait times of <strong>30' ~1h+</strong> because each dish requires different preparation processes.<br><br><strong>Especially during peak hours:</strong> The kitchen prioritizes cooking dishes with large quantities of the same type to ensure the fastest service speed.<br><br><strong>Recommendation:</strong> Choose dishes of the same type to be served faster and have a better dining experience.",
+      "vi": "🍽️ <strong>CẢNH BÁO QUAN TRỌNG:</strong><br><br>Đối với nhóm từ 4+ người, việc đặt nhiều món riêng lẻ có thể dẫn đến thời gian chờ kéo dài từ <strong>30' ~1h+</strong> vì mỗi món cần quy trình chế biến khác nhau.<br><br><strong>Đặc biệt trong giờ cao điểm:</strong> Bếp sẽ ưu tiên nấu các món có số lượng nhiều cùng loại để đảm bảo tốc độ phục vụ nhanh nhất.<br><br><strong>Khuyến nghị:</strong> Chọn các món cùng loại để được phục vụ nhanh hơn và có trải nghiệm ăn uống tốt hơn.",
+      "th": "🍽️ <strong>คำเตือนสำคัญ:</strong><br><br>สำหรับกลุ่ม 4+ คน การสั่งอาหารหลายจานแยกกันอาจส่งผลให้เวลารออาจขยายออกไปจาก <strong>30' ~1h+</strong> เนื่องจากแต่ละจานต้องการกระบวนการเตรียมที่แตกต่างกัน<br><br><strong>โดยเฉพาะในช่วงเวลาที่มีผู้คนมาก:</strong> ครัวจะให้ความสำคัญกับการปรุงอาหารที่มีจำนวนมากประเภทเดียวกันเพื่อให้แน่ใจว่าความเร็วในการให้บริการเร็วที่สุด<br><br><strong>คำแนะนำ:</strong> เลือกอาหารประเภทเดียวกันเพื่อให้บริการเร็วขึ้นและมีประสบการณ์การรับประทานอาหารที่ดีขึ้น",
+      "zh": "🍽️ <strong>重要警告：</strong><br><br>对于4人以上的团体，订购多个单独的菜肴可能会导致等待时间延长至<strong>30' ~1h+</strong>，因为每道菜都需要不同的准备过程。<br><br><strong>特别是在高峰时段：</strong>厨房会优先烹饪同类型数量较多的菜肴，以确保最快的服务速度。<br><br><strong>建议：</strong>选择同类型的菜肴以更快获得服务并获得更好的用餐体验。",
+      "ko": "🍽️ <strong>중요한 경고:</strong><br><br>4명 이상의 그룹의 경우, 여러 개의 개별 요리를 주문하면 각 요리가 다른 준비 과정이 필요하기 때문에 대기 시간이 <strong>30' ~1h+</strong>까지 길어질 수 있습니다.<br><br><strong>특히 피크 시간대에는:</strong> 주방이 같은 유형의 대량 요리를 우선적으로 조리하여 가장 빠른 서비스 속도를 보장합니다.<br><br><strong>권장사항:</strong> 같은 유형의 요리를 선택하여 더 빠른 서비스를 받고 더 나은 식사 경험을 하세요.",
+      "ja": "🍽️ <strong>重要な警告：</strong><br><br>4名以上のグループの場合、複数の個別料理を注文する場合、各料理が異なる準備プロセスを必要とするため、待ち時間が<strong>30' ~1h+</strong>まで長くなる可能性があります。<br><br><strong>特にピーク時間帯には：</strong>キッチンは同じタイプの大量料理を優先的に調理し、最も速いサービス速度を確保します。<br><br><strong>推奨事項：</strong>同じタイプの料理を選択して、より速いサービスを受け、より良い食事体験をしてください。",
+      "ru": "🍽️ <strong>ВАЖНОЕ ПРЕДУПРЕЖДЕНИЕ:</strong><br><br>Для групп от 4+ человек заказ нескольких отдельных блюд может привести к длительному времени ожидания от <strong>30' ~1h+</strong>, поскольку каждое блюдо требует различных процессов приготовления.<br><br><strong>Особенно в часы пик:</strong> Кухня отдает приоритет приготовлению блюд с большим количеством одного типа для обеспечения самой быстрой скорости обслуживания.<br><br><strong>Рекомендация:</strong> Выбирайте блюда одного типа для более быстрого обслуживания и лучшего опыта приема пищи."
     },
     "dish_recommendations": {
       "en": "🍽️ Here are our recommended dishes for your group:",
@@ -1398,6 +1398,42 @@
       "ko": "죄송합니다. 명확하지 않습니다. 메뉴, 영업시간 또는 주문 방법에 대해 문의하실 수 있습니다.",
       "ja": "申し訳ございませんが、よく分かりません。メニュー、営業時間、注文方法についてお聞きください。",
       "ru": "Извините, я не понимаю четко. Вы можете спросить о нашем меню, часах работы или как сделать заказ."
+    },
+    "party_warning_title": {
+      "en": "Order Warning",
+      "vi": "Cảnh Báo Đặt Món",
+      "th": "คำเตือนการสั่งอาหาร",
+      "zh": "点餐警告",
+      "ko": "주문 경고",
+      "ja": "注文警告",
+      "ru": "Предупреждение о заказе"
+    },
+    "party_warning_subtitle": {
+      "en": "Large group",
+      "vi": "Nhóm đông người",
+      "th": "กลุ่มใหญ่",
+      "zh": "大团体",
+      "ko": "대규모 그룹",
+      "ja": "大グループ",
+      "ru": "Большая группа"
+    },
+    "party_warning_message": {
+      "en": "<strong>Important Notice:</strong><br><br>When ordering multiple separate dishes for large groups, wait times can extend from <strong>30' ~1h+</strong> as each dish requires different preparation processes.<br><br><strong>Especially during peak hours:</strong> The kitchen prioritizes cooking dishes with large quantities of the same type to ensure the fastest service speed.<br><br><strong>Recommendation:</strong> Choose dishes of the same type to be served faster and have a better dining experience.",
+      "vi": "<strong>Lưu ý quan trọng:</strong><br><br>Khi đặt nhiều món riêng lẻ cho nhóm đông người, thời gian chờ có thể kéo dài từ <strong>30' ~1h+</strong> do mỗi món cần quy trình chế biến khác nhau.<br><br><strong>Đặc biệt trong giờ cao điểm:</strong> Bếp sẽ ưu tiên nấu các món có số lượng nhiều cùng loại để đảm bảo tốc độ phục vụ nhanh nhất.<br><br><strong>Khuyến nghị:</strong> Chọn các món cùng loại để được phục vụ nhanh hơn và có trải nghiệm ăn uống tốt hơn.",
+      "th": "<strong>คำเตือนสำคัญ:</strong><br><br>เมื่อสั่งอาหารหลายจานแยกกันสำหรับกลุ่มใหญ่ เวลารออาจขยายออกไปจาก <strong>30' ~1h+</strong> เนื่องจากแต่ละจานต้องการกระบวนการเตรียมที่แตกต่างกัน<br><br><strong>โดยเฉพาะในช่วงเวลาที่มีผู้คนมาก:</strong> ครัวจะให้ความสำคัญกับการปรุงอาหารที่มีจำนวนมากประเภทเดียวกันเพื่อให้แน่ใจว่าความเร็วในการให้บริการเร็วที่สุด<br><br><strong>คำแนะนำ:</strong> เลือกอาหารประเภทเดียวกันเพื่อให้บริการเร็วขึ้นและมีประสบการณ์การรับประทานอาหารที่ดีขึ้น",
+      "zh": "<strong>重要通知：</strong><br><br>为大型团体订购多个单独菜肴时，等待时间可能延长至<strong>30' ~1h+</strong>，因为每道菜都需要不同的准备过程。<br><br><strong>特别是在高峰时段：</strong>厨房会优先烹饪同类型数量较多的菜肴，以确保最快的服务速度。<br><br><strong>建议：</strong>选择同类型的菜肴以更快获得服务并获得更好的用餐体验。",
+      "ko": "<strong>중요한 알림:</strong><br><br>대규모 그룹을 위한 여러 개별 요리를 주문할 때, 각 요리가 다른 준비 과정이 필요하기 때문에 대기 시간이 <strong>30' ~1h+</strong>까지 길어질 수 있습니다.<br><br><strong>특히 피크 시간대에는:</strong> 주방이 같은 유형의 대량 요리를 우선적으로 조리하여 가장 빠른 서비스 속도를 보장합니다.<br><br><strong>권장사항:</strong> 같은 유형의 요리를 선택하여 더 빠른 서비스를 받고 더 나은 식사 경험을 하세요.",
+      "ja": "<strong>重要な通知：</strong><br><br>大グループ向けに複数の個別料理を注文する場合、各料理が異なる準備プロセスを必要とするため、待ち時間が<strong>30' ~1h+</strong>まで長くなる可能性があります。<br><br><strong>特にピーク時間帯には：</strong>キッチンは同じタイプの大量料理を優先的に調理し、最も速いサービス速度を確保します。<br><br><strong>推奨事項：</strong>同じタイプの料理を選択して、より速いサービスを受け、より良い食事体験をしてください。",
+      "ru": "<strong>Важное уведомление:</strong><br><br>При заказе нескольких отдельных блюд для больших групп время ожидания может продлиться от <strong>30' ~1h+</strong>, поскольку каждое блюдо требует различных процессов приготовления.<br><br><strong>Особенно в часы пик:</strong> Кухня отдает приоритет приготовлению блюд с большим количеством одного типа для обеспечения самой быстрой скорости обслуживания.<br><br><strong>Рекомендация:</strong> Выбирайте блюда одного типа для более быстрого обслуживания и лучшего опыта приема пищи."
+    },
+    "party_warning_continue": {
+      "en": "Continue",
+      "vi": "Tiếp tục",
+      "th": "ดำเนินการต่อ",
+      "zh": "继续",
+      "ko": "계속",
+      "ja": "続行",
+      "ru": "Продолжить"
     }
   }
 } 

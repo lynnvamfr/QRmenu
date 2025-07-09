@@ -196,6 +196,30 @@
     <!-- Toast Notification Container -->
     <div id="toast-container" class="toast-container"></div>
     
+    <!-- Party Warning Modal -->
+    <div id="party-warning-modal" class="party-warning-modal">
+        <div class="party-warning-content">
+            <div class="party-warning-header">
+                <h2 class="party-warning-title" id="party-warning-title">Cảnh Báo Đặt Món</h2>
+                <div class="party-warning-subtitle" id="party-warning-subtitle">Nhóm đông người</div>
+            </div>
+            <div class="party-warning-body">
+                <div class="party-warning-icon">🍽️</div>
+                <div class="party-warning-message" id="party-warning-message">
+                    <strong>Lưu ý quan trọng:</strong><br><br>
+                    Khi đặt nhiều món riêng lẻ cho nhóm đông người, thời gian chờ có thể kéo dài từ <strong>30' ~1h+</strong> do mỗi món cần quy trình chế biến khác nhau.<br><br>
+                    <strong>Đặc biệt trong giờ cao điểm:</strong> Bếp sẽ ưu tiên nấu các món có số lượng nhiều cùng loại để đảm bảo tốc độ phục vụ nhanh nhất.<br><br>
+                    <strong>Khuyến nghị:</strong> Chọn các món cùng loại để được phục vụ nhanh hơn và có trải nghiệm ăn uống tốt hơn.
+                </div>
+                <div class="party-warning-options">
+                    <button class="party-warning-btn" id="party-warning-btn" onclick="confirmPartyWarning()">
+                        Tiếp tục
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <!-- Debug display -->
     <div id="debug-display" style="position: fixed; top: 10px; left: 10px; z-index: 10000; max-width: 300px;"></div>
     
