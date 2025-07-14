@@ -68,11 +68,6 @@
     <!-- Nút Lên đầu trang -->
     <button id="scroll-to-top">▲</button>
     
-    <!-- Reset special notifications button (hidden) -->
-    <button id="reset-notifications-btn" class="test-button hidden" title="Reset Special Notifications" onclick="resetSpecialNotifications()">
-        🔄 Reset
-    </button>
-    
     <!-- Modal giỏ hàng -->
     <div id="cart-modal" class="cart-modal">
         <div class="cart-content">
@@ -86,6 +81,9 @@
             </div>
             <div id="cart-total" class="cart-total">
                 Tổng: 0đ
+                <button id="send-menu-btn" class="send-menu-btn" style="display: none;" title="Chỉ dành cho nhân viên quán">
+                    📤 Gửi Menu
+                </button>
             </div>
         </div>
     </div>
@@ -219,9 +217,6 @@
             </div>
         </div>
     </div>
-    
-    <!-- Debug display -->
-    <div id="debug-display" style="position: fixed; top: 10px; left: 10px; z-index: 10000; max-width: 300px;"></div>
     
     <script src="script.js"></script>
 </body>

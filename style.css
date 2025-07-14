@@ -966,6 +966,37 @@ header {
     font-size: 36px;
     background-color: #fafafa;
     flex-shrink: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.send-menu-btn {
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.send-menu-btn:hover {
+    background: #218838;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+}
+
+.send-menu-btn:disabled {
+    background: #6c757d;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
 }
 
 .delete-all-btn {
@@ -1502,6 +1533,14 @@ header {
     .cart-total {
         padding: 20px;
         font-size: 24px;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .send-menu-btn {
+        padding: 10px 16px;
+        font-size: 14px;
+        width: 100%;
     }
     
     .cart-items::-webkit-scrollbar {
@@ -1544,134 +1583,6 @@ header {
 /* Hidden class */
 .hidden {
     display: none !important;
-}
-
-/* Test button */
-.test-button {
-    position: fixed;
-    bottom: 120px;
-    right: 20px;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background: #ff6b35;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    z-index: 1000;
-    transition: all 0.3s ease;
-}
-
-.test-button:hover {
-    transform: scale(1.1);
-    background: #e55a2b;
-}
-
-/* Clear chat button */
-.clear-chat-button {
-    position: fixed;
-    bottom: 190px;
-    right: 20px;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background: #dc3545;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    z-index: 1000;
-    transition: all 0.3s ease;
-}
-
-.clear-chat-button:hover {
-    transform: scale(1.1);
-    background: #c82333;
-}
-
-/* Ollama test button */
-.ollama-test-button {
-    position: fixed;
-    bottom: 260px;
-    right: 20px;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background: #17a2b8;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    z-index: 1000;
-    transition: all 0.3s ease;
-}
-
-.ollama-test-button:hover {
-    transform: scale(1.1);
-    background: #138496;
-}
-
-.virtual-keyboard-test-button {
-    position: fixed;
-    bottom: 320px;
-    right: 15px;
-    width: 50px;
-    height: 50px;
-    background: #805ad5;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: all 0.3s ease;
-    z-index: 999;
-}
-
-.virtual-keyboard-test-button:hover {
-    background: #6b46c1;
-    transform: scale(1.1);
-}
-
-@media (max-width: 768px) {
-    .test-button {
-        bottom: 140px;
-        right: 15px;
-        width: 50px;
-        height: 50px;
-        font-size: 14px;
-    }
-    
-    .clear-chat-button {
-        bottom: 200px;
-        right: 15px;
-        width: 50px;
-        height: 50px;
-        font-size: 14px;
-    }
-    
-    .ollama-test-button {
-        bottom: 260px;
-        right: 15px;
-        width: 50px;
-        height: 50px;
-        font-size: 14px;
-    }
-    
-    .virtual-keyboard-test-button {
-        bottom: 320px;
-        right: 15px;
-        width: 50px;
-        height: 50px;
-        font-size: 14px;
-    }
 }
 
 /* Toast Notification System */
